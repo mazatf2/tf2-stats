@@ -1,0 +1,3593 @@
+{
+  "type": "object",
+  "required": [],
+  "properties": {
+    "version": {
+      "type": "number"
+    },
+    "teams": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "Red": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "score": {
+              "type": "number"
+            },
+            "kills": {
+              "type": "number"
+            },
+            "deaths": {
+              "type": "string"
+            },
+            "dmg": {
+              "type": "number"
+            },
+            "charges": {
+              "type": "number"
+            },
+            "drops": {
+              "type": "string"
+            },
+            "firstcaps": {
+              "type": "number"
+            },
+            "caps": {
+              "type": "number"
+            }
+          }
+        },
+        "Blue": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "score": {
+              "type": "number"
+            },
+            "kills": {
+              "type": "number"
+            },
+            "deaths": {
+              "type": "string"
+            },
+            "dmg": {
+              "type": "number"
+            },
+            "charges": {
+              "type": "number"
+            },
+            "drops": {
+              "type": "number"
+            },
+            "firstcaps": {
+              "type": "number"
+            },
+            "caps": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "length": {
+      "type": "number"
+    },
+    "players": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "[U:1:191694677]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "team": {
+              "type": "string"
+            },
+            "class_stats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "assists": {
+                    "type": "number"
+                  },
+                  "deaths": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  },
+                  "weapon": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "tf_projectile_pipe_remote": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "tf_projectile_pipe": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "world": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "string"
+                          },
+                          "avg_dmg": {
+                            "type": "string"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "total_time": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "kills": {
+              "type": "number"
+            },
+            "deaths": {
+              "type": "number"
+            },
+            "assists": {
+              "type": "number"
+            },
+            "suicides": {
+              "type": "number"
+            },
+            "kapd": {
+              "type": "string"
+            },
+            "kpd": {
+              "type": "string"
+            },
+            "dmg": {
+              "type": "number"
+            },
+            "dmg_real": {
+              "type": "number"
+            },
+            "dt": {
+              "type": "number"
+            },
+            "dt_real": {
+              "type": "number"
+            },
+            "hr": {
+              "type": "number"
+            },
+            "lks": {
+              "type": "number"
+            },
+            "as": {
+              "type": "number"
+            },
+            "dapd": {
+              "type": "number"
+            },
+            "dapm": {
+              "type": "number"
+            },
+            "ubers": {
+              "type": "string"
+            },
+            "ubertypes": {
+              "type": "object",
+              "required": [],
+              "properties": {}
+            },
+            "drops": {
+              "type": "string"
+            },
+            "medkits": {
+              "type": "number"
+            },
+            "medkits_hp": {
+              "type": "number"
+            },
+            "backstabs": {
+              "type": "string"
+            },
+            "headshots": {
+              "type": "string"
+            },
+            "headshots_hit": {
+              "type": "string"
+            },
+            "sentries": {
+              "type": "string"
+            },
+            "heal": {
+              "type": "number"
+            },
+            "cpc": {
+              "type": "number"
+            },
+            "ic": {
+              "type": "string"
+            }
+          }
+        },
+        "[U:1:131957877]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "team": {
+              "type": "string"
+            },
+            "class_stats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "assists": {
+                    "type": "number"
+                  },
+                  "deaths": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  },
+                  "weapon": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "quake_rl": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "shotgun_soldier": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "world": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "string"
+                          },
+                          "avg_dmg": {
+                            "type": "string"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "total_time": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "kills": {
+              "type": "number"
+            },
+            "deaths": {
+              "type": "number"
+            },
+            "assists": {
+              "type": "number"
+            },
+            "suicides": {
+              "type": "number"
+            },
+            "kapd": {
+              "type": "string"
+            },
+            "kpd": {
+              "type": "string"
+            },
+            "dmg": {
+              "type": "number"
+            },
+            "dmg_real": {
+              "type": "number"
+            },
+            "dt": {
+              "type": "number"
+            },
+            "dt_real": {
+              "type": "number"
+            },
+            "hr": {
+              "type": "number"
+            },
+            "lks": {
+              "type": "number"
+            },
+            "as": {
+              "type": "number"
+            },
+            "dapd": {
+              "type": "number"
+            },
+            "dapm": {
+              "type": "number"
+            },
+            "ubers": {
+              "type": "string"
+            },
+            "ubertypes": {
+              "type": "object",
+              "required": [],
+              "properties": {}
+            },
+            "drops": {
+              "type": "string"
+            },
+            "medkits": {
+              "type": "number"
+            },
+            "medkits_hp": {
+              "type": "number"
+            },
+            "backstabs": {
+              "type": "string"
+            },
+            "headshots": {
+              "type": "string"
+            },
+            "headshots_hit": {
+              "type": "string"
+            },
+            "sentries": {
+              "type": "string"
+            },
+            "heal": {
+              "type": "string"
+            },
+            "cpc": {
+              "type": "number"
+            },
+            "ic": {
+              "type": "string"
+            }
+          }
+        },
+        "[U:1:115277914]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "team": {
+              "type": "string"
+            },
+            "class_stats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "assists": {
+                    "type": "number"
+                  },
+                  "deaths": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  },
+                  "weapon": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "scattergun": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "the_winger": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "total_time": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "kills": {
+              "type": "number"
+            },
+            "deaths": {
+              "type": "number"
+            },
+            "assists": {
+              "type": "number"
+            },
+            "suicides": {
+              "type": "string"
+            },
+            "kapd": {
+              "type": "string"
+            },
+            "kpd": {
+              "type": "string"
+            },
+            "dmg": {
+              "type": "number"
+            },
+            "dmg_real": {
+              "type": "number"
+            },
+            "dt": {
+              "type": "number"
+            },
+            "dt_real": {
+              "type": "number"
+            },
+            "hr": {
+              "type": "number"
+            },
+            "lks": {
+              "type": "number"
+            },
+            "as": {
+              "type": "string"
+            },
+            "dapd": {
+              "type": "number"
+            },
+            "dapm": {
+              "type": "number"
+            },
+            "ubers": {
+              "type": "string"
+            },
+            "ubertypes": {
+              "type": "object",
+              "required": [],
+              "properties": {}
+            },
+            "drops": {
+              "type": "string"
+            },
+            "medkits": {
+              "type": "number"
+            },
+            "medkits_hp": {
+              "type": "number"
+            },
+            "backstabs": {
+              "type": "string"
+            },
+            "headshots": {
+              "type": "string"
+            },
+            "headshots_hit": {
+              "type": "string"
+            },
+            "sentries": {
+              "type": "string"
+            },
+            "heal": {
+              "type": "number"
+            },
+            "cpc": {
+              "type": "number"
+            },
+            "ic": {
+              "type": "string"
+            }
+          }
+        },
+        "[U:1:106537161]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "team": {
+              "type": "string"
+            },
+            "class_stats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "assists": {
+                    "type": "number"
+                  },
+                  "deaths": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  },
+                  "weapon": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "crusaders_crossbow": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "ubersaw": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "total_time": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "kills": {
+              "type": "number"
+            },
+            "deaths": {
+              "type": "number"
+            },
+            "assists": {
+              "type": "number"
+            },
+            "suicides": {
+              "type": "number"
+            },
+            "kapd": {
+              "type": "string"
+            },
+            "kpd": {
+              "type": "string"
+            },
+            "dmg": {
+              "type": "number"
+            },
+            "dmg_real": {
+              "type": "number"
+            },
+            "dt": {
+              "type": "number"
+            },
+            "dt_real": {
+              "type": "number"
+            },
+            "hr": {
+              "type": "string"
+            },
+            "lks": {
+              "type": "number"
+            },
+            "as": {
+              "type": "string"
+            },
+            "dapd": {
+              "type": "number"
+            },
+            "dapm": {
+              "type": "number"
+            },
+            "ubers": {
+              "type": "number"
+            },
+            "ubertypes": {
+              "type": "object",
+              "required": [],
+              "properties": {
+                "medigun": {
+                  "type": "number"
+                }
+              }
+            },
+            "drops": {
+              "type": "number"
+            },
+            "medkits": {
+              "type": "number"
+            },
+            "medkits_hp": {
+              "type": "number"
+            },
+            "backstabs": {
+              "type": "string"
+            },
+            "headshots": {
+              "type": "string"
+            },
+            "headshots_hit": {
+              "type": "string"
+            },
+            "sentries": {
+              "type": "string"
+            },
+            "heal": {
+              "type": "number"
+            },
+            "cpc": {
+              "type": "number"
+            },
+            "ic": {
+              "type": "string"
+            },
+            "medicstats": {
+              "type": "object",
+              "required": [],
+              "properties": {
+                "deaths_with_95_99_uber": {
+                  "type": "string"
+                },
+                "advantages_lost": {
+                  "type": "number"
+                },
+                "biggest_advantage_lost": {
+                  "type": "number"
+                },
+                "deaths_within_20s_after_uber": {
+                  "type": "number"
+                },
+                "avg_time_before_healing": {
+                  "type": "number"
+                },
+                "avg_time_to_build": {
+                  "type": "number"
+                },
+                "avg_time_before_using": {
+                  "type": "number"
+                },
+                "avg_uber_length": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
+        "[U:1:116028240]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "team": {
+              "type": "string"
+            },
+            "class_stats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "assists": {
+                    "type": "number"
+                  },
+                  "deaths": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  },
+                  "weapon": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "tf_projectile_rocket": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "market_gardener": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "shotgun_soldier": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "world": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "string"
+                          },
+                          "avg_dmg": {
+                            "type": "string"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "total_time": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "kills": {
+              "type": "number"
+            },
+            "deaths": {
+              "type": "number"
+            },
+            "assists": {
+              "type": "number"
+            },
+            "suicides": {
+              "type": "number"
+            },
+            "kapd": {
+              "type": "string"
+            },
+            "kpd": {
+              "type": "string"
+            },
+            "dmg": {
+              "type": "number"
+            },
+            "dmg_real": {
+              "type": "number"
+            },
+            "dt": {
+              "type": "number"
+            },
+            "dt_real": {
+              "type": "number"
+            },
+            "hr": {
+              "type": "number"
+            },
+            "lks": {
+              "type": "number"
+            },
+            "as": {
+              "type": "string"
+            },
+            "dapd": {
+              "type": "number"
+            },
+            "dapm": {
+              "type": "number"
+            },
+            "ubers": {
+              "type": "string"
+            },
+            "ubertypes": {
+              "type": "object",
+              "required": [],
+              "properties": {}
+            },
+            "drops": {
+              "type": "string"
+            },
+            "medkits": {
+              "type": "number"
+            },
+            "medkits_hp": {
+              "type": "number"
+            },
+            "backstabs": {
+              "type": "string"
+            },
+            "headshots": {
+              "type": "string"
+            },
+            "headshots_hit": {
+              "type": "string"
+            },
+            "sentries": {
+              "type": "string"
+            },
+            "heal": {
+              "type": "number"
+            },
+            "cpc": {
+              "type": "number"
+            },
+            "ic": {
+              "type": "string"
+            }
+          }
+        },
+        "[U:1:94956713]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "team": {
+              "type": "string"
+            },
+            "class_stats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "assists": {
+                    "type": "number"
+                  },
+                  "deaths": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  },
+                  "weapon": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "tf_projectile_rocket": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "world": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "string"
+                          },
+                          "avg_dmg": {
+                            "type": "string"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "total_time": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "kills": {
+              "type": "number"
+            },
+            "deaths": {
+              "type": "number"
+            },
+            "assists": {
+              "type": "number"
+            },
+            "suicides": {
+              "type": "number"
+            },
+            "kapd": {
+              "type": "string"
+            },
+            "kpd": {
+              "type": "string"
+            },
+            "dmg": {
+              "type": "number"
+            },
+            "dmg_real": {
+              "type": "number"
+            },
+            "dt": {
+              "type": "number"
+            },
+            "dt_real": {
+              "type": "number"
+            },
+            "hr": {
+              "type": "number"
+            },
+            "lks": {
+              "type": "number"
+            },
+            "as": {
+              "type": "number"
+            },
+            "dapd": {
+              "type": "number"
+            },
+            "dapm": {
+              "type": "number"
+            },
+            "ubers": {
+              "type": "string"
+            },
+            "ubertypes": {
+              "type": "object",
+              "required": [],
+              "properties": {}
+            },
+            "drops": {
+              "type": "string"
+            },
+            "medkits": {
+              "type": "number"
+            },
+            "medkits_hp": {
+              "type": "number"
+            },
+            "backstabs": {
+              "type": "string"
+            },
+            "headshots": {
+              "type": "string"
+            },
+            "headshots_hit": {
+              "type": "string"
+            },
+            "sentries": {
+              "type": "string"
+            },
+            "heal": {
+              "type": "number"
+            },
+            "cpc": {
+              "type": "number"
+            },
+            "ic": {
+              "type": "string"
+            }
+          }
+        },
+        "[U:1:184427212]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "team": {
+              "type": "string"
+            },
+            "class_stats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "assists": {
+                    "type": "number"
+                  },
+                  "deaths": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  },
+                  "weapon": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "scattergun": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "flamethrower": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "string"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "pistol_scout": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "degreaser": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "string"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "warfan": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "string"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "total_time": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "kills": {
+              "type": "number"
+            },
+            "deaths": {
+              "type": "number"
+            },
+            "assists": {
+              "type": "number"
+            },
+            "suicides": {
+              "type": "number"
+            },
+            "kapd": {
+              "type": "string"
+            },
+            "kpd": {
+              "type": "string"
+            },
+            "dmg": {
+              "type": "number"
+            },
+            "dmg_real": {
+              "type": "number"
+            },
+            "dt": {
+              "type": "number"
+            },
+            "dt_real": {
+              "type": "number"
+            },
+            "hr": {
+              "type": "number"
+            },
+            "lks": {
+              "type": "number"
+            },
+            "as": {
+              "type": "string"
+            },
+            "dapd": {
+              "type": "number"
+            },
+            "dapm": {
+              "type": "number"
+            },
+            "ubers": {
+              "type": "string"
+            },
+            "ubertypes": {
+              "type": "object",
+              "required": [],
+              "properties": {}
+            },
+            "drops": {
+              "type": "string"
+            },
+            "medkits": {
+              "type": "number"
+            },
+            "medkits_hp": {
+              "type": "number"
+            },
+            "backstabs": {
+              "type": "string"
+            },
+            "headshots": {
+              "type": "number"
+            },
+            "headshots_hit": {
+              "type": "number"
+            },
+            "sentries": {
+              "type": "string"
+            },
+            "heal": {
+              "type": "number"
+            },
+            "cpc": {
+              "type": "number"
+            },
+            "ic": {
+              "type": "string"
+            }
+          }
+        },
+        "[U:1:98538574]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "team": {
+              "type": "string"
+            },
+            "class_stats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "assists": {
+                    "type": "number"
+                  },
+                  "deaths": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  },
+                  "weapon": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "tf_projectile_rocket": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "world": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "string"
+                          },
+                          "avg_dmg": {
+                            "type": "string"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "total_time": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "kills": {
+              "type": "number"
+            },
+            "deaths": {
+              "type": "number"
+            },
+            "assists": {
+              "type": "number"
+            },
+            "suicides": {
+              "type": "string"
+            },
+            "kapd": {
+              "type": "string"
+            },
+            "kpd": {
+              "type": "string"
+            },
+            "dmg": {
+              "type": "number"
+            },
+            "dmg_real": {
+              "type": "number"
+            },
+            "dt": {
+              "type": "number"
+            },
+            "dt_real": {
+              "type": "number"
+            },
+            "hr": {
+              "type": "number"
+            },
+            "lks": {
+              "type": "number"
+            },
+            "as": {
+              "type": "number"
+            },
+            "dapd": {
+              "type": "number"
+            },
+            "dapm": {
+              "type": "number"
+            },
+            "ubers": {
+              "type": "string"
+            },
+            "ubertypes": {
+              "type": "object",
+              "required": [],
+              "properties": {}
+            },
+            "drops": {
+              "type": "string"
+            },
+            "medkits": {
+              "type": "number"
+            },
+            "medkits_hp": {
+              "type": "number"
+            },
+            "backstabs": {
+              "type": "string"
+            },
+            "headshots": {
+              "type": "string"
+            },
+            "headshots_hit": {
+              "type": "string"
+            },
+            "sentries": {
+              "type": "string"
+            },
+            "heal": {
+              "type": "number"
+            },
+            "cpc": {
+              "type": "number"
+            },
+            "ic": {
+              "type": "string"
+            }
+          }
+        },
+        "[U:1:294550613]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "team": {
+              "type": "string"
+            },
+            "class_stats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "assists": {
+                    "type": "number"
+                  },
+                  "deaths": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  },
+                  "weapon": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "scattergun": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "pistol_scout": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "total_time": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "kills": {
+              "type": "number"
+            },
+            "deaths": {
+              "type": "number"
+            },
+            "assists": {
+              "type": "number"
+            },
+            "suicides": {
+              "type": "number"
+            },
+            "kapd": {
+              "type": "string"
+            },
+            "kpd": {
+              "type": "string"
+            },
+            "dmg": {
+              "type": "number"
+            },
+            "dmg_real": {
+              "type": "number"
+            },
+            "dt": {
+              "type": "number"
+            },
+            "dt_real": {
+              "type": "number"
+            },
+            "hr": {
+              "type": "number"
+            },
+            "lks": {
+              "type": "number"
+            },
+            "as": {
+              "type": "string"
+            },
+            "dapd": {
+              "type": "number"
+            },
+            "dapm": {
+              "type": "number"
+            },
+            "ubers": {
+              "type": "string"
+            },
+            "ubertypes": {
+              "type": "object",
+              "required": [],
+              "properties": {}
+            },
+            "drops": {
+              "type": "string"
+            },
+            "medkits": {
+              "type": "number"
+            },
+            "medkits_hp": {
+              "type": "number"
+            },
+            "backstabs": {
+              "type": "string"
+            },
+            "headshots": {
+              "type": "string"
+            },
+            "headshots_hit": {
+              "type": "string"
+            },
+            "sentries": {
+              "type": "string"
+            },
+            "heal": {
+              "type": "string"
+            },
+            "cpc": {
+              "type": "number"
+            },
+            "ic": {
+              "type": "string"
+            }
+          }
+        },
+        "[U:1:128024784]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "team": {
+              "type": "string"
+            },
+            "class_stats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "assists": {
+                    "type": "number"
+                  },
+                  "deaths": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  },
+                  "weapon": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "crusaders_crossbow": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "string"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "ubersaw": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "total_time": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "kills": {
+              "type": "number"
+            },
+            "deaths": {
+              "type": "number"
+            },
+            "assists": {
+              "type": "number"
+            },
+            "suicides": {
+              "type": "number"
+            },
+            "kapd": {
+              "type": "string"
+            },
+            "kpd": {
+              "type": "string"
+            },
+            "dmg": {
+              "type": "number"
+            },
+            "dmg_real": {
+              "type": "number"
+            },
+            "dt": {
+              "type": "number"
+            },
+            "dt_real": {
+              "type": "number"
+            },
+            "hr": {
+              "type": "string"
+            },
+            "lks": {
+              "type": "number"
+            },
+            "as": {
+              "type": "string"
+            },
+            "dapd": {
+              "type": "number"
+            },
+            "dapm": {
+              "type": "number"
+            },
+            "ubers": {
+              "type": "number"
+            },
+            "ubertypes": {
+              "type": "object",
+              "required": [],
+              "properties": {
+                "medigun": {
+                  "type": "number"
+                }
+              }
+            },
+            "drops": {
+              "type": "string"
+            },
+            "medkits": {
+              "type": "number"
+            },
+            "medkits_hp": {
+              "type": "number"
+            },
+            "backstabs": {
+              "type": "string"
+            },
+            "headshots": {
+              "type": "string"
+            },
+            "headshots_hit": {
+              "type": "string"
+            },
+            "sentries": {
+              "type": "string"
+            },
+            "heal": {
+              "type": "number"
+            },
+            "cpc": {
+              "type": "number"
+            },
+            "ic": {
+              "type": "string"
+            },
+            "medicstats": {
+              "type": "object",
+              "required": [],
+              "properties": {
+                "deaths_with_95_99_uber": {
+                  "type": "string"
+                },
+                "advantages_lost": {
+                  "type": "number"
+                },
+                "biggest_advantage_lost": {
+                  "type": "number"
+                },
+                "deaths_within_20s_after_uber": {
+                  "type": "number"
+                },
+                "avg_time_before_healing": {
+                  "type": "number"
+                },
+                "avg_time_to_build": {
+                  "type": "number"
+                },
+                "avg_time_before_using": {
+                  "type": "number"
+                },
+                "avg_uber_length": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
+        "[U:1:52631210]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "team": {
+              "type": "string"
+            },
+            "class_stats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "assists": {
+                    "type": "number"
+                  },
+                  "deaths": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  },
+                  "weapon": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "tf_projectile_pipe": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "tf_projectile_pipe_remote": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "total_time": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "kills": {
+              "type": "number"
+            },
+            "deaths": {
+              "type": "number"
+            },
+            "assists": {
+              "type": "number"
+            },
+            "suicides": {
+              "type": "number"
+            },
+            "kapd": {
+              "type": "string"
+            },
+            "kpd": {
+              "type": "string"
+            },
+            "dmg": {
+              "type": "number"
+            },
+            "dmg_real": {
+              "type": "number"
+            },
+            "dt": {
+              "type": "number"
+            },
+            "dt_real": {
+              "type": "number"
+            },
+            "hr": {
+              "type": "number"
+            },
+            "lks": {
+              "type": "number"
+            },
+            "as": {
+              "type": "number"
+            },
+            "dapd": {
+              "type": "number"
+            },
+            "dapm": {
+              "type": "number"
+            },
+            "ubers": {
+              "type": "string"
+            },
+            "ubertypes": {
+              "type": "object",
+              "required": [],
+              "properties": {}
+            },
+            "drops": {
+              "type": "string"
+            },
+            "medkits": {
+              "type": "number"
+            },
+            "medkits_hp": {
+              "type": "number"
+            },
+            "backstabs": {
+              "type": "string"
+            },
+            "headshots": {
+              "type": "string"
+            },
+            "headshots_hit": {
+              "type": "string"
+            },
+            "sentries": {
+              "type": "string"
+            },
+            "heal": {
+              "type": "number"
+            },
+            "cpc": {
+              "type": "number"
+            },
+            "ic": {
+              "type": "string"
+            }
+          }
+        },
+        "[U:1:166535746]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "team": {
+              "type": "string"
+            },
+            "class_stats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "assists": {
+                    "type": "number"
+                  },
+                  "deaths": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  },
+                  "weapon": {
+                    "type": "object",
+                    "required": [],
+                    "properties": {
+                      "scattergun": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "pistol_scout": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "number"
+                          },
+                          "avg_dmg": {
+                            "type": "number"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "world": {
+                        "type": "object",
+                        "required": [],
+                        "properties": {
+                          "kills": {
+                            "type": "number"
+                          },
+                          "dmg": {
+                            "type": "string"
+                          },
+                          "avg_dmg": {
+                            "type": "string"
+                          },
+                          "shots": {
+                            "type": "string"
+                          },
+                          "hits": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "total_time": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "kills": {
+              "type": "number"
+            },
+            "deaths": {
+              "type": "number"
+            },
+            "assists": {
+              "type": "number"
+            },
+            "suicides": {
+              "type": "number"
+            },
+            "kapd": {
+              "type": "string"
+            },
+            "kpd": {
+              "type": "string"
+            },
+            "dmg": {
+              "type": "number"
+            },
+            "dmg_real": {
+              "type": "number"
+            },
+            "dt": {
+              "type": "number"
+            },
+            "dt_real": {
+              "type": "number"
+            },
+            "hr": {
+              "type": "number"
+            },
+            "lks": {
+              "type": "number"
+            },
+            "as": {
+              "type": "string"
+            },
+            "dapd": {
+              "type": "number"
+            },
+            "dapm": {
+              "type": "number"
+            },
+            "ubers": {
+              "type": "string"
+            },
+            "ubertypes": {
+              "type": "object",
+              "required": [],
+              "properties": {}
+            },
+            "drops": {
+              "type": "string"
+            },
+            "medkits": {
+              "type": "number"
+            },
+            "medkits_hp": {
+              "type": "number"
+            },
+            "backstabs": {
+              "type": "number"
+            },
+            "headshots": {
+              "type": "string"
+            },
+            "headshots_hit": {
+              "type": "string"
+            },
+            "sentries": {
+              "type": "string"
+            },
+            "heal": {
+              "type": "string"
+            },
+            "cpc": {
+              "type": "number"
+            },
+            "ic": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "names": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "[U:1:191694677]": {
+          "type": "string"
+        },
+        "[U:1:131957877]": {
+          "type": "string"
+        },
+        "[U:1:115277914]": {
+          "type": "string"
+        },
+        "[U:1:106537161]": {
+          "type": "string"
+        },
+        "[U:1:116028240]": {
+          "type": "string"
+        },
+        "[U:1:94956713]": {
+          "type": "string"
+        },
+        "[U:1:184427212]": {
+          "type": "string"
+        },
+        "[U:1:98538574]": {
+          "type": "string"
+        },
+        "[U:1:294550613]": {
+          "type": "string"
+        },
+        "[U:1:128024784]": {
+          "type": "string"
+        },
+        "[U:1:52631210]": {
+          "type": "string"
+        },
+        "[U:1:166535746]": {
+          "type": "string"
+        }
+      }
+    },
+    "rounds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "start_time": {
+            "type": "number"
+          },
+          "winner": {
+            "type": "string"
+          },
+          "team": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "Blue": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "score": {
+                    "type": "number"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  },
+                  "ubers": {
+                    "type": "string"
+                  }
+                }
+              },
+              "Red": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "score": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  },
+                  "ubers": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [],
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "time": {
+                  "type": "number"
+                },
+                "team": {
+                  "type": "string"
+                },
+                "point": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "players": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "[U:1:191694677]": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "team": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  }
+                }
+              },
+              "[U:1:115277914]": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "team": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "string"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  }
+                }
+              },
+              "[U:1:184427212]": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "team": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "string"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  }
+                }
+              },
+              "[U:1:166535746]": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "team": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  }
+                }
+              },
+              "[U:1:98538574]": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "team": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  }
+                }
+              },
+              "[U:1:294550613]": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "team": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  }
+                }
+              },
+              "[U:1:94956713]": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "team": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "number"
+                  },
+                  "dmg": {
+                    "type": "number"
+                  }
+                }
+              },
+              "[U:1:131957877]": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "team": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "string"
+                  },
+                  "dmg": {
+                    "type": "string"
+                  }
+                }
+              },
+              "[U:1:106537161]": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "team": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "string"
+                  },
+                  "dmg": {
+                    "type": "string"
+                  }
+                }
+              },
+              "[U:1:116028240]": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "team": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "string"
+                  },
+                  "dmg": {
+                    "type": "string"
+                  }
+                }
+              },
+              "[U:1:128024784]": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "team": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "string"
+                  },
+                  "dmg": {
+                    "type": "string"
+                  }
+                }
+              },
+              "[U:1:52631210]": {
+                "type": "object",
+                "required": [],
+                "properties": {
+                  "team": {
+                    "type": "string"
+                  },
+                  "kills": {
+                    "type": "string"
+                  },
+                  "dmg": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "firstcap": {
+            "type": "string"
+          },
+          "length": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "healspread": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "[U:1:106537161]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "[U:1:166535746]": {
+              "type": "number"
+            },
+            "[U:1:294550613]": {
+              "type": "number"
+            },
+            "[U:1:191694677]": {
+              "type": "number"
+            },
+            "[U:1:94956713]": {
+              "type": "number"
+            },
+            "[U:1:116028240]": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:128024784]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "[U:1:98538574]": {
+              "type": "number"
+            },
+            "[U:1:52631210]": {
+              "type": "number"
+            },
+            "[U:1:115277914]": {
+              "type": "number"
+            },
+            "[U:1:184427212]": {
+              "type": "number"
+            },
+            "[U:1:131957877]": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "classkills": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "[U:1:98538574]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "spy": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:166535746]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:94956713]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "scout": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:294550613]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "scout": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:191694677]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "soldier": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:52631210]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "scout": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "spy": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "heavyweapons": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:131957877]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "demoman": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "spy": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:116028240]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "medic": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:184427212]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "scout": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "spy": {
+              "type": "number"
+            },
+            "heavyweapons": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:115277914]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "spy": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:128024784]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "scout": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:106537161]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "soldier": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "classdeaths": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "[U:1:116028240]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:131957877]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "scout": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:184427212]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:115277914]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "scout": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "engineer": {
+              "type": "number"
+            },
+            "heavyweapons": {
+              "type": "number"
+            },
+            "spy": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:98538574]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "demoman": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "heavyweapons": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:166535746]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "demoman": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:191694677]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:128024784]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "spy": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:294550613]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "pyro": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:106537161]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "scout": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:94956713]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "demoman": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:52631210]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "demoman": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "engineer": {
+              "type": "number"
+            },
+            "spy": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "classkillassists": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "[U:1:98538574]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "spy": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:166535746]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:94956713]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "scout": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:106537161]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "scout": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:294550613]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "scout": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:191694677]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:52631210]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "scout": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "spy": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "heavyweapons": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:131957877]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "demoman": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            },
+            "spy": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:128024784]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "demoman": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "spy": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:116028240]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "medic": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            },
+            "pyro": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:184427212]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "scout": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "soldier": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "spy": {
+              "type": "number"
+            },
+            "heavyweapons": {
+              "type": "number"
+            }
+          }
+        },
+        "[U:1:115277914]": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "soldier": {
+              "type": "number"
+            },
+            "scout": {
+              "type": "number"
+            },
+            "sniper": {
+              "type": "number"
+            },
+            "heavyweapons": {
+              "type": "number"
+            },
+            "medic": {
+              "type": "number"
+            },
+            "demoman": {
+              "type": "number"
+            },
+            "spy": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "chat": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "steamid": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "msg": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "info": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "map": {
+          "type": "string"
+        },
+        "supplemental": {
+          "type": "boolean"
+        },
+        "total_length": {
+          "type": "number"
+        },
+        "hasRealDamage": {
+          "type": "boolean"
+        },
+        "hasWeaponDamage": {
+          "type": "boolean"
+        },
+        "hasAccuracy": {
+          "type": "string"
+        },
+        "hasHP": {
+          "type": "boolean"
+        },
+        "hasHP_real": {
+          "type": "boolean"
+        },
+        "hasHS": {
+          "type": "boolean"
+        },
+        "hasHS_hit": {
+          "type": "boolean"
+        },
+        "hasBS": {
+          "type": "boolean"
+        },
+        "hasCP": {
+          "type": "boolean"
+        },
+        "hasSB": {
+          "type": "string"
+        },
+        "hasDT": {
+          "type": "boolean"
+        },
+        "hasAS": {
+          "type": "boolean"
+        },
+        "hasHR": {
+          "type": "boolean"
+        },
+        "hasIntel": {
+          "type": "string"
+        },
+        "AD_scoring": {
+          "type": "string"
+        },
+        "notifications": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "title": {
+          "type": "string"
+        },
+        "date": {
+          "type": "number"
+        },
+        "uploader": {
+          "type": "object",
+          "required": [],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "info": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "killstreaks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "steamid": {
+            "type": "string"
+          },
+          "streak": {
+            "type": "number"
+          },
+          "time": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "success": {
+      "type": "boolean"
+    }
+  }
+}
