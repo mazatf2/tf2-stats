@@ -1,4 +1,4 @@
-export const dataDecimals = 2
+export const dataDecimals = 1 //1.0
 
 export function sum(array) {
 	if (array && array.length > 0)

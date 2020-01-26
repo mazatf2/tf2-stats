@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {dataDecimals, max, sum} from './utils'
-
+import './css/Table.css'
 
 class CombatPanel extends Component {
 	render() {
@@ -11,7 +11,7 @@ class CombatPanel extends Component {
 
 		const kills = sum(player.kills)
 		const deaths = sum(player.deaths)
-		const kdr = (kills / deaths).toFixed(dataDecimals) //player.kpd
+		const kdr =  Number(player.kpd).toFixed(dataDecimals)
 		const streak = max(player.lks)//max(player.killstreaks.streak)
 
 		let playTimeS = 0
@@ -29,20 +29,20 @@ class CombatPanel extends Component {
 				<table>
 					<thead>
 					<tr>
-						<th>Combat</th>
+						<th className='table-header'>Combat</th>
 					</tr>
 					</thead>
 					<tbody>
 					<tr>
-						<th>accu</th>
+						<th>Accuracy</th>
 						<td>3%</td>
 					</tr>
 					<tr>
-						<th>KD / Ratio</th>
+						<th>K/D ratio</th>
 						<td>{kdr}</td>
 					</tr>
 					<tr>
-						<th>Kills</th>
+						<th className='table-header'>Kills</th>
 					</tr>
 					<tr>
 						<th>Total</th>
@@ -61,7 +61,7 @@ class CombatPanel extends Component {
 						<td>{killsPerGame}</td>
 					</tr>
 					<tr>
-						<th>Deaths</th>
+						<th className='table-header'>Deaths</th>
 					</tr>
 					<tr>
 						<th>Total</th>

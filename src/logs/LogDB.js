@@ -37,21 +37,21 @@ function player() {
 	this.dmg_real = []
 	this.dt = [] //Amount of the damage the player has taken.
 	this.dt_real = []
-	this.hr = [] //healing received
+	this.hr = [] //Amount of healing the player received. info.hasHR. real heals received?
 	this.lks = [] //The player’s longest killstreak.
 	this.as = [] //Amount of airshots.
 	this.dapd = []
 	this.dapm = [] //The player's Damage per Minute.
-	this.ubers = []
-	this.ubertypes = []
+	this.ubers = [] //obj
+	this.ubertypes = [] //obj
 	this.drops = []
 	this.medkits = []
 	this.medkits_hp = []
 	this.backstabs = []
 	this.headshots = []
 	this.headshots_hit = []
-	this.sentries = [] //sentries built
-	this.heal = []
+	this.sentries = [] //sentries built. info.hasSB
+	this.heal = [] //heals received. all heals(pickup, medic, dispencer, resupply)? .hr == real heals received?
 	this.cpc = [] //capture point caps
 	this.ic = [] //intel caps
 
@@ -113,7 +113,8 @@ class LogDB {
 							DB.players[steamID].class_stats[i.type][innerKey].push(innerValue)
 						}
 					})
-
+				} else if (key === 'kpd' || key === 'kapd') {
+					DB.players[steamID][key].push(Number(value))
 				} else {
 					DB.players[steamID][key].push(value)
 				}

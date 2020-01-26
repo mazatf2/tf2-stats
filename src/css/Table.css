@@ -1,0 +1,10 @@
+th {
+    text-align: left;
+    font-weight: normal;
+}
+td {
+    text-align: right;
+}
+.table-header{
+    font-weight: bold;
+}

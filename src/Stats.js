@@ -55,6 +55,7 @@ class Stats extends Component {
 			<div>
 				stats {steamID} aaaaa
 				<CombatPanel player={player} db={this.state.db}/>
+
 				<ClassBadge showClass='scout' player={player} steamID={steamID} db={this.state.db}/>
 				<ClassBadge showClass='soldier' player={player} steamID={steamID} db={this.state.db}/>
 				<ClassBadge showClass='pyro' player={player} steamID={steamID} db={this.state.db}/>
