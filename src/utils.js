@@ -7,9 +7,29 @@ export function sum(array) {
 		return 0
 }
 
+export function toFixed(num) {
+	if (Number(num))
+		return Number(num).toFixed(dataDecimals)
+	return 0
+}
+
 export function max(array) {
 	if (array && array.length > 0)
 		return Math.max(...array)
 	if (array && array.length === 0)
 		return 0
+}
+
+export const humanReadableName ={
+	scout: 			'Scout',
+	soldier: 		'Soldier',
+	pyro: 			'Pyro',
+
+	demoman: 		'Demoman',
+	heavyweapons: 	'Heavy',
+	engineer: 		'Engineer',
+
+	medic: 			'Medic',
+	sniper: 		'Sniper',
+	spy: 			'Spy',
 }

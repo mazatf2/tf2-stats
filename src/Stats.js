@@ -7,6 +7,7 @@ import test2 from './data/test2.json'
 import CombatPanel from './CombatPanel'
 import ClassBadge from './badges/ClassBadge'
 import {DB} from './logs/LogDB'
+import './css/Grid.css'
 
 class Stats extends Component {
 	state = {
@@ -56,18 +57,21 @@ class Stats extends Component {
 				stats {steamID} aaaaa
 				<CombatPanel player={player} db={this.state.db}/>
 
-				<ClassBadge showClass='scout' player={player} steamID={steamID} db={this.state.db}/>
-				<ClassBadge showClass='soldier' player={player} steamID={steamID} db={this.state.db}/>
-				<ClassBadge showClass='pyro' player={player} steamID={steamID} db={this.state.db}/>
+				<div className='grid'>
 
-				<ClassBadge showClass='demoman' player={player} steamID={steamID} db={this.state.db}/>
-				<ClassBadge showClass='heavyweapons' player={player} steamID={steamID} db={this.state.db}/>
-				<ClassBadge showClass='engineer' player={player} steamID={steamID} db={this.state.db}/>
 
-				<ClassBadge showClass='medic' player={player} steamID={steamID} db={this.state.db}/>
-				<ClassBadge showClass='sniper' player={player} steamID={steamID} db={this.state.db}/>
-				<ClassBadge showClass='spy' player={player} steamID={steamID} db={this.state.db}/>
+				<ClassBadge showClass='scout' player={player} steamID={steamID}/>
+				<ClassBadge showClass='soldier' player={player} steamID={steamID}/>
+				<ClassBadge showClass='pyro' player={player} steamID={steamID}/>
 
+				<ClassBadge showClass='demoman' player={player} steamID={steamID}/>
+				<ClassBadge showClass='heavyweapons' player={player} steamID={steamID}/>
+				<ClassBadge showClass='engineer' player={player} steamID={steamID}/>
+
+				<ClassBadge showClass='medic' player={player} steamID={steamID}/>
+				<ClassBadge showClass='sniper' player={player} steamID={steamID}/>
+				<ClassBadge showClass='spy' player={player} steamID={steamID}/>
+			</div>
 			</div>
 		)
 	}

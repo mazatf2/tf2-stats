@@ -1,3 +1,7 @@
-.ClassBadge {
-	list-style: none;
+.ClassBadge th {
+	visibility: hidden;
+}
+
+.ClassBadge-show-labels {
+	visibility: visible !important;
 }
