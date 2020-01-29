@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import schema from './GetSchemaForGame'
 
-class AchievementImage extends Component {
+class SchemaAchievement extends Component {
 	render() {
 		const name = this.props.name
 		const version = this.props.version //bool
@@ -21,4 +21,4 @@ class AchievementImage extends Component {
 	}
 }
 
-export default AchievementImage
+export default SchemaAchievement

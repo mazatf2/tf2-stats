@@ -1,7 +1,7 @@
 import React from 'react'
 import './ClassBadge.css'
 import {dataDecimals, humanReadableName, sum, toFixed} from '../utils'
-import AchievementImage from '../steam_api/AchievementImage'
+import SchemaAchievement from '../steam_api/SchemaAchievement'
 
 class ClassBadge extends React.Component {
 	constructor(props) {
@@ -69,10 +69,11 @@ class ClassBadge extends React.Component {
 		const kdr = toFixed(kills / deaths)
 
 		let achName = showClass.toUpperCase()
-		if (achName === 'HEAVYWEAPONS')
+		if (achName === 'HEAVYWEAPONS') {
 			achName = 'HEAVY'
+		}
 		let badgeName = `TF_${achName}_ACHIEVE_PROGRESS1`
-		const badgeImg = <AchievementImage name={badgeName} version={time > 0.1}/>
+		const badgeImg = <SchemaAchievement name={badgeName} version={time > 0.1}/>
 
 		return (
 			<div>

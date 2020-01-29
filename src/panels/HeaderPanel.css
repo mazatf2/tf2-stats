@@ -1,0 +1,24 @@
+.Header-Panel {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.Header-Panel-Images {
+	display: grid;
+	grid-template-areas:
+			"a b"
+			"a c";
+}
+
+.Header-Panel-Images :nth-child(1) {
+	grid-area: a;
+}
+
+.Header-Panel-Images :nth-child(2) {
+	grid-area: b;
+}
+
+.Header-Panel-Images :nth-child(3) {
+	grid-area: c;
+}
+

@@ -1,5 +1,3 @@
-import ProcessLog from './ProcessLog'
-
 class FetchLog {
 	static fetchID(logID) {
 		return fetch(`https://logs.tf/json/${logID}`, {cache: 'force-cache'})

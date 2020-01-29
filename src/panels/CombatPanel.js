@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import {dataDecimals, max, sum} from './utils'
-import './css/Table.css'
+import {dataDecimals, max, sum} from '../utils'
+import '../css/Table.css'
 
 class CombatPanel extends Component {
 	render() {
@@ -19,10 +19,10 @@ class CombatPanel extends Component {
 			playTimeS += sum(pClass.total_time)
 		}
 		const killsPerMin = (playTimeS / 60 / kills).toFixed(dataDecimals)
-		const killsPerGame = kills / player.kills.length
+		const killsPerGame = (kills / player.kills.length).toFixed(dataDecimals)
 
 		const deathsPerMin = (playTimeS / 60 / deaths).toFixed(dataDecimals)
-		const deathsPerGame = deaths / player.deaths.length
+		const deathsPerGame = (deaths / player.deaths.length).toFixed(dataDecimals)
 
 		return (
 			<div>
@@ -82,11 +82,6 @@ class CombatPanel extends Component {
 					</tbody>
 
 				</table>
-				<p>
-					Total<br/>
-					Kills: {sum(player.kills)}<br/>
-					Deaths: {sum(player.deaths)}
-				</p>
 			</div>
 		)
 	}

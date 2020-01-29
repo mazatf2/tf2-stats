@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Stats from './Stats'
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+import {BrowserRouter as Router, Link, Route} from "react-router-dom"
+import StatsPage from './StatsPage'
+import TestsPage from './TestsPage'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <Router>
+	return (
+		<div className="App">
+			<header className="App-header">
+				<img src={logo} className="App-logo" alt="logo"/>
+			</header>
+			<Router>
+				<p>
+					<Link to="/">front page</Link></p>
+				<p>
+					<Link to="/test">tests</Link>
+				</p>
+				<p>
+                    <Link to="/profile/76561198075543642">test profile</Link>
+				</p>
+				<Route path="/test" component={TestsPage}/>
+				<Route path="/profile/:id(\d+)" component={StatsPage}/>
 
-              <Link to="/">front page</Link>
-          <Link to="/profile">profile</Link>
-          <Link to="/profile/76561198075543642">test</Link>
-          <Route path="/profile/:id(\d+)" component={Stats} />
-
-      </Router>
-    </div>
-  );
+			</Router>
+		</div>
+	)
 }
 
-export default App;
+export default App
