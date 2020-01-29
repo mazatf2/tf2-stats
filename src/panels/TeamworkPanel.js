@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {dataDecimals, max, sum} from '../utils'
 
 class TeamworkPanel extends Component {
 	render() {
@@ -7,11 +6,6 @@ class TeamworkPanel extends Component {
 		if (!player) {
 			return (<div>working...</div>)
 		}
-
-		const kills = sum(player.kills)
-		const deaths = sum(player.deaths)
-		const kdr = Number(player.kpd).toFixed(dataDecimals)
-		const streak = max(player.lks)//max(player.killstreaks.streak)
 
 		return (
 			<div>
