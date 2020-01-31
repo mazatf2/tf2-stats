@@ -1,5 +1,11 @@
 import LogDB from './LogDB'
 
+export const Winner = {
+	red: 'Red',
+	blue: 'Blue',
+	stalemate: 'Stalemate'
+}
+
 class ProcessLog {
 	constructor() {
 		this.db = new LogDB()
@@ -7,11 +13,21 @@ class ProcessLog {
 
 	newLog(log, steam3ID) {
 		return new Promise(resolve => {
+			let winner = Winner.red
+			const redScore = log.teams.Red.score
+			const blueScore = log.teams.Blue.score
+			if(blueScore > redScore){
+				winner = Winner.blue
+			}
+			if(blueScore === redScore){
+				winner = Winner.stalemate
+			}
+
 
 			for (let [steamID, player] of Object.entries(log.players)) {
 				this.db.addPlayer(steamID)
 					.then(() => {
-						this.db.addPlayerEntry(steamID, player)
+						this.db.addPlayerEntry(steamID, player, winner)
 					})
 					.then(db => {
 						this.db.addInfoEntry(steamID, log)
