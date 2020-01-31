@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {sum} from '../utils'
 
 class TeamworkPanel extends Component {
 	render() {
@@ -6,6 +7,11 @@ class TeamworkPanel extends Component {
 		if (!player) {
 			return (<div>working...</div>)
 		}
+		const wins = player.wins
+		const loses = player.loses
+		const stalemates = player.stalemates
+		const captures = sum(player.cpc) //capture points capped
+		const ubers = sum(player.ubers)
 
 		return (
 			<div>
@@ -18,11 +24,26 @@ class TeamworkPanel extends Component {
 					<tbody>
 					<tr>
 						<th>Wins</th>
-						<td></td>
+						<td>{wins}</td>
 					</tr>
 					<tr>
 						<th>Loses</th>
-						<td></td>
+						<td>{loses}</td>
+					</tr>
+					<tr>
+						<th>Stalemates</th>
+						<td>{stalemates}</td>
+					</tr>
+					<tr>
+						<th>Captures</th>
+						<td>{captures}</td>
+					</tr>
+					<tr>
+						<th className='table-header'>Other</th>
+					</tr>
+					<tr>
+						<th>Über Charges</th>
+						<td>{ubers}</td>
 					</tr>
 					</tbody>
 				</table>

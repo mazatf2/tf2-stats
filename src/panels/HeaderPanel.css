@@ -3,6 +3,28 @@
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
+.Header-Panel-Info {
+	display: grid;
+	grid-template-areas:
+			"a b"
+			"c d";
+}
+
+.Header-Panel-Info :nth-child(1) {
+	grid-area: a;
+}
+
+.Header-Panel-Info :nth-child(2) {
+	grid-area: b;
+}
+
+.Header-Panel-Info :nth-child(3) {
+	grid-area: c;
+}
+.Header-Panel-Info :nth-child(4) {
+	grid-area: d;
+}
+
 .Header-Panel-Images {
 	display: grid;
 	grid-template-areas:
