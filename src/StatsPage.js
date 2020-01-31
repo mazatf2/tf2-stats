@@ -10,6 +10,7 @@ import './css/Grid.css'
 import HeaderPanel from './panels/HeaderPanel'
 import * as SteamID from 'steamid'
 import TeamworkPanel from './panels/TeamworkPanel'
+import GlobalPanel from './panels/GlobalPanel'
 
 class StatsPage extends Component {
 	state = {
@@ -60,6 +61,7 @@ class StatsPage extends Component {
 				stats {steamID}
 				<HeaderPanel player={player}/>
 				<div className='grid'>
+					<GlobalPanel player={player}/>
 					<TeamworkPanel player={player}/>
 					<CombatPanel player={player}/>
 				</div>
