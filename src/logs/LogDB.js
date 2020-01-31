@@ -1,4 +1,5 @@
 import {max} from '../utils'
+import {Winner} from './ProcessLog'
 
 export let DB = {
 	players: {}
@@ -96,6 +97,7 @@ class Player {
 
 		this.wins = 0
 		this.loses = 0
+		this.stalemates = 0
 
 		return this
 	}
@@ -121,7 +123,7 @@ class Player {
 			let timesPlayed = this.maps.filter(obj => obj === gameMap).length
 			this.mapsPlayed[gameMap] = timesPlayed
 
-			if(timesPlayed > mostTimesPlayed){
+			if (timesPlayed > mostTimesPlayed) {
 				mostTimesPlayedMap = gameMap
 				mostTimesPlayed = timesPlayed
 			}
@@ -156,7 +158,7 @@ class LogDB {
 		})
 	}
 
-	addPlayerEntry(steamID, obj) {
+	addPlayerEntry(steamID, obj, winner) {
 		return new Promise(resolve => {
 			for (let [key, value] of Object.entries(obj)) {
 				if (key === 'class_stats') { //obj
@@ -184,10 +186,19 @@ class LogDB {
 				} else if (key === 'kpd' || key === 'kapd') {
 					DB.players[steamID][key].push(Number(value))
 				} else if (key === 'team') {
-					if(value === 'Red')
+					if (value === 'Red') {
 						DB.players[steamID].team.Red.push(value)
-					if(value === 'Blue')
+					}
+					if (value === 'Blue') {
 						DB.players[steamID].team.Blue.push(value)
+					}
+					if (winner === value) {
+						DB.players[steamID].wins += 1
+					} else if (winner === Winner.stalemate) {
+						DB.players[steamID].stalemates += 1
+					} else {
+						DB.players[steamID].loses += 1
+					}
 				} else {
 					DB.players[steamID][key].push(value)
 				}
@@ -197,7 +208,7 @@ class LogDB {
 		})
 	}
 
-	addInfoEntry(steamID, obj){
+	addInfoEntry(steamID, obj) {
 		return new Promise(resolve => {
 			console.log(12)
 			DB.players[steamID].maps.push(obj.info['map'])
