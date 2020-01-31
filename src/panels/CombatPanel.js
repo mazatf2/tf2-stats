@@ -11,7 +11,7 @@ class CombatPanel extends Component {
 
 		const kills = sum(player.kills)
 		const deaths = sum(player.deaths)
-		const kdr =  Number(player.kpd).toFixed(dataDecimals)
+		const kdr =  (sum(player.kpd)/player.kpd.length).toFixed(dataDecimals)
 		const streak = max(player.lks)//max(player.killstreaks.streak)
 
 		let playTimeS = 0
