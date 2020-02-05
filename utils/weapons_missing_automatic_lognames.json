@@ -208,7 +208,7 @@
 				"value": 1
 			}
 		],
-		"is_weapon_added_manually_to_def": false
+		"is_weapon_added_manually_to_def": true
 	},
 	"42": {
 		"name": "The Sandvich",
@@ -367,7 +367,7 @@
 				"value": 1
 			}
 		],
-		"is_weapon_added_manually_to_def": false
+		"is_weapon_added_manually_to_def": true
 	},
 	"57": {
 		"name": "The Razorback",
