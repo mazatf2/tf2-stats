@@ -1,3 +1,5 @@
+const output = '../src/images/'
+
 const fs = require('fs')
 const tf_english = require('./tf_english.json').lang.Tokens
 const tf_items = require('./items_game.json').items_game
@@ -135,7 +137,7 @@ const main = (name) => {
 	addMissingWeapon('tf_projectile_arrow', 56)
 	//TODO check if 1092 Fortified Compound is needed?
 
-	fs.writeFile('weapon_lognames_def.json', JSON.stringify(weaponLogNames, null, '\t'), (err) => {
+	fs.writeFile(output + 'weapon_lognames_def.json', JSON.stringify(weaponLogNames, null, '\t'), (err) => {
 		if (err) throw err
 		console.log('weapon_lognames_def.json done')
 	})
