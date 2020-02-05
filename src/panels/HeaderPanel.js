@@ -4,6 +4,7 @@ import SchemaItem from '../steam_api/SchemaItem'
 import ClassImage from '../images/ClassImage'
 import MapImage from '../images/MapImage'
 import {dataDecimals, sum} from '../utils'
+import WeaponImage from '../images/WeaponImage'
 
 class HeaderPanel extends Component {
 	render() {
@@ -14,6 +15,7 @@ class HeaderPanel extends Component {
 
 		const mostPlayedClass = player.mostPlayedClass
 		const mostPlayedMap = player.mostPlayedMap
+		const mostUsedWeapon = player.mostUsedWeapon
 
 		const kdr = (sum(player.kpd)/player.kpd.length).toFixed(dataDecimals)
 		const kills = sum(player.kills)
@@ -37,7 +39,7 @@ class HeaderPanel extends Component {
 				</div>
 				<div className='Header-Panel-Images'>
 					<ClassImage class={mostPlayedClass}/>
-					<SchemaItem name='TF_WEAPON_ROCKETLAUNCHER'/>
+					<WeaponImage name={mostUsedWeapon}/>
 					<MapImage map={mostPlayedMap}/>
 				</div>
 			</div>

@@ -21,8 +21,17 @@ const find = (name) => {
 class SchemaItem extends Component {
 	render() {
 		const name = this.props.name //item_class
-		const item = find(name)
-		const src = item.image_url
+		let url = this.props.url || ''
+		let item = ''
+		let src = ''
+
+		if (name) {
+			item = find(name)
+			src = item.image_url
+		}
+		if (url) {
+			src = url
+		}
 
 		return (
 			<img alt='' src={src}></img>
