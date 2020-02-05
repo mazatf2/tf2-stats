@@ -1,4 +1,4 @@
-import {max} from '../utils'
+import {max, sum} from '../utils'
 import {Winner} from './ProcessLog'
 
 export let DB = {
@@ -21,6 +21,7 @@ function ClassStatsHelper() {
 	this.total_time = []
 
 	this.maxPlaytime = 0
+	this.mostUsedWeapon = ''
 }
 
 let ClassStatsWeaponHelper = function () {
@@ -29,6 +30,10 @@ let ClassStatsWeaponHelper = function () {
 	this.avg_dmg = []
 	this.shots = []
 	this.hits = []
+
+	this.killCount = 0
+	this.avgKillCountPerGame = 0
+	this.totalDmg = 0
 	return this
 }
 ClassStatsWeaponHelper.prototype.addData = function (data) {
@@ -94,6 +99,7 @@ class Player {
 		this.mostPlayedClass = ''
 		this.mostPlayedClassPlayTime = 0
 		this.mostPlayedMap = ''
+		this.mostUsedWeapon = ''
 
 		this.wins = 0
 		this.loses = 0
@@ -129,6 +135,34 @@ class Player {
 			}
 		}
 		this.mostPlayedMap = mostTimesPlayedMap
+
+		let mostKills = 0
+		let mostKillsWeaponName = ''
+		for (let gameClass of Object.values(this.class_stats)) {
+			let classKillCount = 0
+			for (let [name, weapon] of Object.entries(gameClass.weapon)) {
+				const killCount = sum(weapon.kills)
+				weapon.killCount = killCount
+				weapon.avgKillCountPerGame = killCount / weapon.kills.length || 1
+				weapon.totalDmg = sum(weapon.dmg)
+
+				if (classKillCount === 0) {
+					gameClass.mostUsedWeapon = name //for medics without kills
+				}
+				if (mostKills === 0) {
+					mostKillsWeaponName = name //for medics without kills
+				}
+				if (killCount > classKillCount) {
+					classKillCount = killCount
+					gameClass.mostUsedWeapon = name
+				}
+				if (killCount > mostKills) {
+					mostKills = killCount
+					mostKillsWeaponName = name
+				}
+			}
+		}
+		this.mostUsedWeapon = mostKillsWeaponName
 	}
 }
 
