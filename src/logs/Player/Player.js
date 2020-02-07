@@ -1,9 +1,13 @@
-import {max, sum} from '../../utils'
+import {average, max, sum} from '../../utils'
 import {ClassStatsHelper} from './ClassStatsHelper'
 import {KillStreaksHelper} from './KillStreaksHelper'
 
 export class Player {
-	constructor() {
+	constructor(steamID, logInfoObj) {
+		this.steamID = steamID
+		this._info = logInfoObj
+		this._isAccuracyEnabled = this._info.hasAccuracy || false
+
 		this.team = {Red: [], Blue: []}
 		this.kills = []
 		this.deaths = []
@@ -59,6 +63,9 @@ export class Player {
 		this.loses = 0
 		this.stalemates = 0
 
+		this.accuracy = []
+		this.avgAccuracy = 0.0
+
 		return this
 	}
 
@@ -100,6 +107,22 @@ export class Player {
 				weapon.avgKillCountPerGame = killCount / weapon.kills.length || 1
 				weapon.totalDmg = sum(weapon.dmg)
 
+				const {hits, shots} = weapon
+				let accuracy = hits[hits.length - 1] / shots[shots.length - 1]
+
+				if (accuracy && accuracy !== Infinity) {
+					weapon.accuracy.push(accuracy)
+					gameClass.accuracy.push(accuracy)
+					this.accuracy.push(accuracy)
+				} else if (this._isAccuracyEnabled) {
+					weapon.accuracy.push(0)
+					gameClass.accuracy.push(0)
+					this.accuracy.push(0)
+				}
+				if (weapon.accuracy.length > 1) {
+					weapon.avgAccuracy = average(weapon.accuracy)
+				}
+
 				if (classKillCount === 0) {
 					gameClass.mostUsedWeapon = name //for medics without kills
 				}
@@ -115,7 +138,16 @@ export class Player {
 					mostKillsWeaponName = name
 				}
 			}
+
+			if (gameClass.accuracy.length > 1) {
+				gameClass.avgAccuracy = average(gameClass.accuracy)
+			}
 		}
+
+		if (this.accuracy.length > 1) {
+			this.avgAccuracy = average(this.accuracy)
+		}
+
 		this.mostUsedWeapon = mostKillsWeaponName
 	}
 }

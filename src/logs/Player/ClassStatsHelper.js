@@ -10,5 +10,7 @@ export class ClassStatsHelper {
 
 		this.maxPlaytime = 0
 		this.mostUsedWeapon = ''
+		this.accuracy = []
+		this.avgAccuracy = 0.0
 	}
 }

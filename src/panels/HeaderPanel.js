@@ -1,9 +1,8 @@
 import React, {Component} from 'react'
 import './HeaderPanel.css'
-import SchemaItem from '../steam_api/SchemaItem'
 import ClassImage from '../images/ClassImage'
 import MapImage from '../images/MapImage'
-import {dataDecimals, sum} from '../utils'
+import {dataDecimals, dataPercentage, sum} from '../utils'
 import WeaponImage from '../images/WeaponImage'
 
 class HeaderPanel extends Component {
@@ -17,12 +16,14 @@ class HeaderPanel extends Component {
 		const mostPlayedMap = player.mostPlayedMap
 		const mostUsedWeapon = player.mostUsedWeapon
 
-		const kdr = (sum(player.kpd)/player.kpd.length).toFixed(dataDecimals)
+		const kdr = (sum(player.kpd) / player.kpd.length).toFixed(dataDecimals)
 		const kills = sum(player.kills)
 
 		const wins = player.wins
 		const loses = player.loses || 1
 		const wlr = (wins / loses || 1).toFixed(dataDecimals)
+
+		const accuracy = (player.avgAccuracy || 0 ).toFixed(dataPercentage) * 100
 
 		return (
 			<div className='Header-Panel'>
@@ -35,7 +36,7 @@ class HeaderPanel extends Component {
 						W/L<br/>{wlr}<br/>{wins} Wins
 					</p>
 					<p>Time</p>
-					<p>Accuracy</p>
+					<p>Accuracy<br/>{accuracy} %</p>
 				</div>
 				<div className='Header-Panel-Images'>
 					<ClassImage class={mostPlayedClass}/>

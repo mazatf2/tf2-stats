@@ -1,4 +1,5 @@
 export const dataDecimals = 1 //1.0
+export const dataPercentage = 3
 
 export function sum(array) {
 	if (array && array.length > 0)
@@ -16,6 +17,16 @@ export function toFixed(num) {
 export function max(array) {
 	if (array && array.length > 0)
 		return Math.max(...array)
+	if (array && array.length === 0)
+		return 0
+}
+
+export function average(array) {
+	if(!array) return 0
+	const total = sum(array)
+	if(total === 0) return 0
+	if (array && array.length > 0)
+		return sum(array) / array.length
 	if (array && array.length === 0)
 		return 0
 }

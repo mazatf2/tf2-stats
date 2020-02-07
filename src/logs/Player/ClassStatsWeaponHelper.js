@@ -6,8 +6,10 @@ export class ClassStatsWeaponHelper {
 		this.shots = []
 		this.hits = []
 
+		this.accuracy = []
+		this.avgAccuracy = 0.0
 		this.killCount = 0
-		this.avgKillCountPerGame = 0
+		this.avgKillCountPerGame = 0.0
 		this.totalDmg = 0
 	}
 
