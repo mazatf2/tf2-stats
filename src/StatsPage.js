@@ -7,7 +7,6 @@ import test3 from './data/2426167.json'
 import test4 from './data/2426192.json'
 import CombatPanel from './panels/CombatPanel'
 import ClassBadge from './badges/ClassBadge'
-import {DB} from './logs/LogDB'
 import './css/Grid.css'
 import HeaderPanel from './panels/HeaderPanel'
 import * as SteamID from 'steamid'
@@ -16,7 +15,7 @@ import GlobalPanel from './panels/GlobalPanel'
 
 class StatsPage extends Component {
 	state = {
-		db: DB,
+		db: null,
 		player: null,
 		steam3ID: '[U:1:135100113]'//'[U:1:115277914]'
 	}

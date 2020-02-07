@@ -23,14 +23,13 @@ class ProcessLog {
 				winner = Winner.stalemate
 			}
 
-
 			for (let [steamID, player] of Object.entries(log.players)) {
-				this.db.addPlayer(steamID)
+				this.db.addPlayer(steamID, log.info)
 					.then(() => {
-						this.db.addPlayerEntry(steamID, player, winner)
+						this.db.appendPlayerEntry(steamID, player, winner)
 					})
 					.then(db => {
-						this.db.addInfoEntry(steamID, log)
+						this.db.preCalcValues(steamID, log)
 					})
 			}
 			for (let killStreak of log.killstreaks) {
