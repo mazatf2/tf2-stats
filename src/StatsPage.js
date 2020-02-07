@@ -3,6 +3,8 @@ import ProcessLog from './logs/ProcessLog'
 
 import test1 from './data/test1.json'
 import test2 from './data/test2.json'
+import test3 from './data/2426167.json'
+import test4 from './data/2426192.json'
 import CombatPanel from './panels/CombatPanel'
 import ClassBadge from './badges/ClassBadge'
 import {DB} from './logs/LogDB'
@@ -22,34 +24,24 @@ class StatsPage extends Component {
 	componentDidMount() {
 		console.log('mount')
 		let id = this.props.match.params.id
-		let steam3ID = new SteamID(id).getSteam3RenderedID(id)
+		let steam3ID = new SteamID(id).getSteam3RenderedID()
 		this.setState({steam3ID: steam3ID})
 
-		const processLog = new ProcessLog()
-		processLog.newLog(test2, steam3ID)
-			.then(newDBData => {
+		const testData = async ()=>{
+			const processLog = new ProcessLog()
+			await processLog.newLog(test1, steam3ID)
+			await processLog.newLog(test2, steam3ID)
+			await processLog.newLog(test3, steam3ID)
+			const result = await processLog.newLog(test4, steam3ID)
+			result.db.then((db)=>{
+				this.setState({db: db})
+			})
+			result.player.then((player)=>{
+				this.setState({player: player})
 			})
 
-		processLog.newLog(test1, steam3ID)
-			.then(newDBData => {
-			})
-
-		processLog.newLog(test1, steam3ID)
-			.then(newDBData => {
-				newDBData.db.then(db =>
-					this.setState({db: db})
-				)
-				newDBData.player.then(player => {
-					console.log(player)
-					this.setState({player: player})
-				})
-
-
-			})
-		console.log(test1)
-		console.log(this.state.db)
-
-		window.processLog = processLog
+		}
+		testData()
 	}
 
 	render() {
