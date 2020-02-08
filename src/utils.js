@@ -1,3 +1,5 @@
+import weaponLogNames from './images/weapon_lognames_def.json'
+
 export const dataDecimals = 1 //1.0
 export const dataPercentage = 3
 
@@ -43,6 +45,14 @@ export const humanReadableName ={
 	medic: 			'Medic',
 	sniper: 		'Sniper',
 	spy: 			'Spy',
+}
+
+export const localizedWeapon = (name) => {
+	const entry = weaponLogNames[name]
+	if (entry) {
+		return entry.tf_english
+	}
+	return name
 }
 
 //https://wiki.alliedmods.net/Team_Fortress_2_Weapons#Weapons
