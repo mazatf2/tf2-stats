@@ -46,10 +46,10 @@ class LogDB {
 							//debugger;
 							if (innerKey === 'weapon') {
 								const weaponsObj = innerValue
-								for (let [weapon, weaponData] of Object.entries(weaponsObj)) {
-									let entry = this.DB.players[steamID].class_stats[gameClass]['weapon'][weapon]
+								for (let [weaponName, weaponData] of Object.entries(weaponsObj)) {
+									let entry = this.DB.players[steamID].class_stats[gameClass]['weapon'][weaponName]
 									if (!entry) {
-										entry = this.DB.players[steamID].class_stats[gameClass]['weapon'][weapon] = new ClassStatsWeaponHelper()
+										entry = this.DB.players[steamID].class_stats[gameClass]['weapon'][weaponName] = new ClassStatsWeaponHelper(weaponName)
 									}
 									entry.addData(weaponData)
 

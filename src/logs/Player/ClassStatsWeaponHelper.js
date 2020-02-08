@@ -1,11 +1,14 @@
 export class ClassStatsWeaponHelper {
-	constructor() {
+	constructor(name) {
+		if(!name) throw name
+
 		this.kills = []
 		this.dmg = []
 		this.avg_dmg = []
 		this.shots = []
 		this.hits = []
 
+		this.name = name
 		this.accuracy = []
 		this.avgAccuracy = 0.0
 		this.killCount = 0
