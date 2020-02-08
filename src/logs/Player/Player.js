@@ -70,6 +70,11 @@ export class Player {
 	}
 
 	calcValues = () => {
+		this._playTime()
+		this._weaponUsage()
+	}
+
+	_playTime = () => {
 		let maxPlayTime = 0
 		let mostPlayed = ''
 		for (let gameClassString of Object.keys(this.class_stats)) {
@@ -96,7 +101,9 @@ export class Player {
 			}
 		}
 		this.mostPlayedMap = mostTimesPlayedMap
+	}
 
+	_weaponUsage = () => {
 		let mostKills = 0
 		let mostKillsWeaponName = ''
 		for (let gameClass of Object.values(this.class_stats)) {
