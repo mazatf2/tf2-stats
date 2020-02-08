@@ -130,9 +130,8 @@ export class Player {
 					gameClass.accuracy.push(0)
 					this.accuracy.push(0)
 				}
-				if (weapon.accuracy.length > 1) {
-					weapon.avgAccuracy = average(weapon.accuracy)
-				}
+
+				weapon.avgAccuracy = average(weapon.accuracy)
 
 				if (classKillCount === 0) {
 					gameClass.mostUsedWeapon = name //for medics without kills
