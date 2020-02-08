@@ -12,7 +12,6 @@ class ClassBadge extends React.Component {
 
 	componentDidMount() {
 		window.ref = this.tableRef
-		console.log(this.tableRef)
 		//	this.checkSidebar()
 	}
 

@@ -54,9 +54,3 @@ export const localizedWeapon = (name) => {
 	}
 	return name
 }
-
-//https://wiki.alliedmods.net/Team_Fortress_2_Weapons#Weapons
-export const weaponToSteamApi = {
-	tf_projectile_rocket: 'TF_WEAPON_ROCKETLAUNCHER'
-
-}

@@ -14,7 +14,6 @@ class TopWeaponsPanel extends Component {
 			<table>
 				<tbody>
 				{topWeapons.map(([name, weapon]) => {
-					console.log(name, weapon)
 					return (
 						<tr key={name}>
 							<th><WeaponImage name={name}/></th>

@@ -22,7 +22,6 @@ class StatsPage extends Component {
 	}
 
 	componentDidMount() {
-		console.log('mount')
 		let id = this.props.match.params.id
 		let steam3ID = new SteamID(id).getSteam3RenderedID()
 		this.setState({steam3ID: steam3ID})
