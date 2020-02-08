@@ -33,7 +33,7 @@ export function average(array) {
 		return 0
 }
 
-export const humanReadableName ={
+export const localizedClass ={
 	scout: 			'Scout',
 	soldier: 		'Soldier',
 	pyro: 			'Pyro',

@@ -1,6 +1,6 @@
 import React from 'react'
 import './ClassBadge.css'
-import {dataDecimals, humanReadableName, sum, toFixed} from '../utils'
+import {dataDecimals, localizedClass, sum, toFixed} from '../utils'
 import SchemaAchievement from '../steam_api/SchemaAchievement'
 
 class ClassBadge extends React.Component {
@@ -61,7 +61,7 @@ class ClassBadge extends React.Component {
 
 		const data = player.class_stats[showClass]
 
-		const classLabel = humanReadableName[showClass]
+		const classLabel = localizedClass[showClass]
 		const time = Number(sum(data.total_time) / 60).toFixed(dataDecimals)
 		const kills = sum(data.kills)
 		const assists = sum(data.assists)
