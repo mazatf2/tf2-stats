@@ -5,8 +5,12 @@ import WeaponLognames from './weapon_lognames_def.json'
 class WeaponImage extends Component {
 	render() {
 		const name = this.props.name
-		if(!name){
-			return ''
+		if (!name) {
+			throw name
+		}
+		let entry = WeaponLognames[name]
+		if (!entry) {
+			return name
 		}
 		const url = WeaponLognames[name].image_url
 

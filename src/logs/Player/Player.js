@@ -66,6 +66,8 @@ export class Player {
 		this.accuracy = []
 		this.avgAccuracy = 0.0
 
+		this.topWeapons = {} //{scattergun: ClassStatsWeaponHelper}
+
 		return this
 	}
 
@@ -114,6 +116,8 @@ export class Player {
 				weapon.avgKillCountPerGame = killCount / weapon.kills.length || 1
 				weapon.totalDmg = sum(weapon.dmg)
 
+				this._addTopWeapon(weapon)
+
 				const {hits, shots} = weapon
 				let accuracy = hits[hits.length - 1] / shots[shots.length - 1]
 
@@ -156,5 +160,8 @@ export class Player {
 		}
 
 		this.mostUsedWeapon = mostKillsWeaponName
+	}
+	_addTopWeapon = (weapon) => {
+		this.topWeapons[weapon.name] = weapon
 	}
 }

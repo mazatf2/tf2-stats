@@ -12,6 +12,7 @@ import HeaderPanel from './panels/HeaderPanel'
 import * as SteamID from 'steamid'
 import TeamworkPanel from './panels/TeamworkPanel'
 import GlobalPanel from './panels/GlobalPanel'
+import TopWeaponsPanel from './panels/TopWeaponsPanel'
 
 class StatsPage extends Component {
 	state = {
@@ -69,6 +70,7 @@ class StatsPage extends Component {
 					<ClassBadge showClass='sniper' player={player} steamID={steamID}/>
 					<ClassBadge showClass='spy' player={player} steamID={steamID}/>
 				</div>
+				<TopWeaponsPanel player={player}/>
 			</div>
 		)
 	}
