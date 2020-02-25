@@ -13,6 +13,7 @@ import * as SteamID from 'steamid'
 import TeamworkPanel from './panels/TeamworkPanel'
 import GlobalPanel from './panels/GlobalPanel'
 import TopWeaponsPanel from './panels/TopWeaponsPanel'
+import MedalsPanel from './panels/MedalsPanel'
 
 class StatsPage extends Component {
 	state = {
@@ -69,7 +70,12 @@ class StatsPage extends Component {
 					<ClassBadge showClass='sniper' player={player} steamID={steamID}/>
 					<ClassBadge showClass='spy' player={player} steamID={steamID}/>
 				</div>
-				<TopWeaponsPanel player={player}/>
+				<div className='grid'>
+					<TopWeaponsPanel player={player}/>
+				</div>
+				<div className='grid'>
+					<MedalsPanel player={player}/>
+				</div>
 			</div>
 		)
 	}

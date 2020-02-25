@@ -1,4 +1,5 @@
 import LogDB from './LogDB'
+import {Medals} from './Medals/Medals'
 
 export const Winner = {
 	red: 'Red',
@@ -16,10 +17,10 @@ class ProcessLog {
 			let winner = Winner.red
 			const redScore = log.teams.Red.score
 			const blueScore = log.teams.Blue.score
-			if(blueScore > redScore){
+			if (blueScore > redScore) {
 				winner = Winner.blue
 			}
-			if(blueScore === redScore){
+			if (blueScore === redScore) {
 				winner = Winner.stalemate
 			}
 
@@ -32,6 +33,10 @@ class ProcessLog {
 						this.db.preCalcValues(steamID, log)
 					})
 			}
+			
+			const medals = new Medals(this.db)
+			medals.awardMedals()
+
 			for (let killStreak of log.killstreaks) {
 				this.db.addKillStreaksEntry(killStreak.steamid, killStreak)
 
