@@ -1872,7 +1872,7 @@
 	"flaregun": {
 		"log_name": "flaregun",
 		"logname_source": "manual",
-		"tf_english": "err",
+		"tf_english": "Flare Gun",
 		"defindex": 39,
 		"image_url": "http://media.steampowered.com/apps/440/icons/c_flaregun_pyro.873aa41664ef4dad38eb15eb2f753350876516df.png",
 		"image_url_large": "http://media.steampowered.com/apps/440/icons/c_flaregun_pyro_large.e6631254f42107f0f3817bd321971d461fbb1bc5.png",

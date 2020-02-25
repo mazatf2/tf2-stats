@@ -61,10 +61,15 @@ const addWeapon = (name, schemaData, nameSource) => {
 	const nameSourceKeys = Object.keys(nameSources)
 	if (!nameSourceKeys.includes(nameSource)) throw nameSource
 
+	let item_name = schemaData.item_name
+	if (item_name === '#TF_Unique_Achievement_Flaregun') {
+		item_name = '#TF_Unique_Achievement_FlareGun'
+	}
+
 	let result = {
 		log_name: name,
 		logname_source: nameSource,
-		tf_english: getLocalized(schemaData.item_name),
+		tf_english: getLocalized(item_name),
 		defindex: schemaData.defindex,
 		image_url: schemaData.image_url,
 		image_url_large: schemaData.image_url_large,
