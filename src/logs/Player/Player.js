@@ -69,6 +69,34 @@ export class Player {
 		this.topWeapons = {} //{scattergun: ClassStatsWeaponHelper}
 
 		this.score = 0
+		this.currentMatchScore = 0
+		this.currentMatch = {
+			kills: null,
+			deaths: null,
+			assists: null,
+			suicides: null,
+			dmg: null,
+			dmg_real: null,
+			dt: null,
+			dt_real: null,
+			hr: null,
+			lks: null,
+			as: null,
+			dapd: null,
+			dapm: null,
+			ubers: null,
+			ubertypes: null,
+			drops: null,
+			medkits: null,
+			medkits_hp: null,
+			backstabs: null,
+			headshots: null,
+			headshots_hit: null,
+			sentries: null,
+			heal: null,
+			cpc: null,
+			ic: null,
+		}
 
 		return this
 	}
@@ -163,12 +191,17 @@ export class Player {
 
 		this.mostUsedWeapon = mostKillsWeaponName
 	}
+
 	_addTopWeapon = (weapon) => {
 		this.topWeapons[weapon.name] = weapon
 	}
 
 	_score() {
 		//https://wiki.teamfortress.com/wiki/Scoreboard#Points
-		this.score += sum(this.kills) + (sum(this.assists) / 2) + sum(this.cpc) //TODO
+		const score = sum(this.kills) + (sum(this.assists) / 2) + sum(this.cpc) //TODO
+		const matchScore = this.currentMatch.kills + (this.currentMatch.assists / 2) + this.currentMatch.cpc
+
+		this.score += score
+		this.currentMatchScore = matchScore
 	}
 }

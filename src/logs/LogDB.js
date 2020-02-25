@@ -78,6 +78,7 @@ class LogDB {
 					}
 				} else {
 					this.DB.players[steamID][key].push(value)
+					this.DB.players[steamID].currentMatch[key] = value
 				}
 
 			}
