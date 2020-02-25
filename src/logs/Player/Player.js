@@ -68,12 +68,15 @@ export class Player {
 
 		this.topWeapons = {} //{scattergun: ClassStatsWeaponHelper}
 
+		this.score = 0
+
 		return this
 	}
 
 	calcValues = () => {
 		this._playTime()
 		this._weaponUsage()
+		this._score()
 	}
 
 	_playTime = () => {
@@ -162,5 +165,10 @@ export class Player {
 	}
 	_addTopWeapon = (weapon) => {
 		this.topWeapons[weapon.name] = weapon
+	}
+
+	_score() {
+		//https://wiki.teamfortress.com/wiki/Scoreboard#Points
+		this.score += sum(this.kills) + (sum(this.assists) / 2) + sum(this.cpc) //TODO
 	}
 }

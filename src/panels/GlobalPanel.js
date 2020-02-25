@@ -7,8 +7,7 @@ class GlobalPanel extends Component {
 		if (!player) {
 			return (<div>working...</div>)
 		}
-		//https://wiki.teamfortress.com/wiki/Scoreboard#Points
-		const score = sum(player.kills) + (sum(player.assists) / 2) + sum(player.cpc) //FIXME
+		const score = player.score
 
 		return (
 			<div>
