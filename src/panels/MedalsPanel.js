@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import medalsDef from '../logs/Medals/Medals_def'
+import MedalImage from '../images/MedalImage'
 
 class MedalsPanel extends Component {
 	render() {
@@ -9,7 +11,22 @@ class MedalsPanel extends Component {
 
 		return (
 			<div>
-				medals panel
+				{Object.entries(medalsDef).map(([key, value]) => {
+					const amountGet = player.medals[key] || 0
+					const isDisabled = amountGet < 1
+
+					let txt = ``
+					if (!isDisabled) {
+						txt = `${amountGet}x ${value.name}`
+					}
+
+					return (
+						<div key={key}>
+							<MedalImage name={key} isDisabled={isDisabled}/>
+							{txt}
+						</div>
+					)
+				})}
 			</div>
 		)
 	}

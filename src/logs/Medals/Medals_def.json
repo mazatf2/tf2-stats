@@ -1,0 +1,17 @@
+{
+  "gold": {
+	"name": "Gold Star",
+	"src": "kenneyMedals/PNG/shaded_medal1.png",
+	"req": "Highest score"
+  },
+  "silver": {
+	"name": "Silver Star",
+	"src": "kenneyMedals/PNG/shaded_medal3.png",
+	"req": "Second-highest score"
+  },
+  "bronze": {
+	"name": "Bronze Star",
+	"src": "kenneyMedals/PNG/shaded_medal2.png",
+	"req": "Third-highest score"
+  }
+}
