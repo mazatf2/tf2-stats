@@ -1,5 +1,4 @@
 import LogDB from './LogDB'
-import {Medals} from './Medals/Medals'
 
 export const Winner = {
 	red: 'Red',
@@ -24,18 +23,22 @@ class ProcessLog {
 				winner = Winner.stalemate
 			}
 
+			let promises = []
 			for (let [steamID, player] of Object.entries(log.players)) {
-				this.db.addPlayer(steamID, log.info)
-					.then(() => {
-						this.db.appendPlayerEntry(steamID, player, winner)
-					})
-					.then(db => {
-						this.db.preCalcValues(steamID, log)
-					})
+				promises.push(
+					this.db.addPlayer(steamID, log.info)
+						.then(() => {
+							this.db.appendPlayerEntry(steamID, player, winner)
+						})
+						.then(db => {
+							this.db.preCalcValues(steamID, log)
+						})
+				)
 			}
-			
-			const medals = new Medals(this.db)
-			medals.awardMedals()
+
+			Promise.all(promises).then(() => {
+				this.db.awardMedals(Object.keys(log.players))
+			})
 
 			for (let killStreak of log.killstreaks) {
 				this.db.addKillStreaksEntry(killStreak.steamid, killStreak)

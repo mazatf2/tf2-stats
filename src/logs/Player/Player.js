@@ -97,6 +97,7 @@ export class Player {
 			cpc: null,
 			ic: null,
 		}
+		this.medals = {gold: 0, silver: 0, bronze: 0}
 
 		return this
 	}

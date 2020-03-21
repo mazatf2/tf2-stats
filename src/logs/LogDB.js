@@ -1,6 +1,7 @@
 import {Winner} from './ProcessLog'
 import {Player} from './Player/Player'
 import {ClassStatsWeaponHelper} from './Player/ClassStatsWeaponHelper'
+import {Medals} from './Medals/Medals'
 
 class LogDB {
 	constructor() {
@@ -10,7 +11,8 @@ class LogDB {
 				return new Promise(resolve => {
 					resolve(this.DB.players[steamID])
 				})
-		}}
+			}
+		}
 		window.db = this.DB //debug
 	}
 
@@ -91,6 +93,16 @@ class LogDB {
 			this.DB.players[steamID].maps.push(obj.info['map'])
 			this.DB.players[steamID].calcValues()
 			resolve(this.DB)
+		})
+	}
+
+	awardMedals(playerIDList) {
+		return new Promise(resolve => {
+			const medals = new Medals(this.DB)
+			medals.awardMedals(playerIDList).then(() => {
+				resolve(this.DB)
+			})
+
 		})
 	}
 
