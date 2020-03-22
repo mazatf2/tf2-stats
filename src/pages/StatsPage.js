@@ -27,7 +27,7 @@ class StatsPage extends Component {
 		let id = this.props.match.params.id
 		const steam64 = new SteamID(id)
 
-		if(!steam64.isValid()){
+		if (!steam64.isValid()) {
 			this.setState({error: 'Invalid Steam ID'})
 			return
 		}
@@ -35,16 +35,16 @@ class StatsPage extends Component {
 		let steam3ID = steam64.getSteam3RenderedID()
 		this.setState({steam3ID: steam3ID})
 
-		const testData = async ()=>{
+		const testData = async () => {
 			const processLog = new ProcessLog()
 			await processLog.newLog(test1, steam3ID)
 			await processLog.newLog(test2, steam3ID)
 			await processLog.newLog(test3, steam3ID)
 			const result = await processLog.newLog(test4, steam3ID)
-			result.db.then((db)=>{
+			result.db.then((db) => {
 				this.setState({db: db})
 			})
-			result.player.then((player)=>{
+			result.player.then((player) => {
 				this.setState({player: player})
 			})
 
@@ -53,7 +53,7 @@ class StatsPage extends Component {
 	}
 
 	render() {
-		if(this.state.error){
+		if (this.state.error) {
 			return (<div>{this.state.error}</div>)
 		}
 
