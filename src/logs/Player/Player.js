@@ -5,8 +5,10 @@ import {KillStreaksHelper} from './KillStreaksHelper'
 export class Player {
 	constructor(steamID, logInfoObj) {
 		this.steamID = steamID
-		this._info = logInfoObj
-		this._isAccuracyEnabled = this._info.hasAccuracy || false
+
+		this._info = null // initNewLog()
+		this._isAccuracyEnabled = false // initNewLog()
+		this.initNewLog(logInfoObj)
 
 		this.team = {Red: [], Blue: []}
 		this.kills = []
@@ -100,6 +102,11 @@ export class Player {
 		this.medals = {gold: 0, silver: 0, bronze: 0}
 
 		return this
+	}
+
+	initNewLog = (logInfoObj) => {
+		this._info = logInfoObj
+		this._isAccuracyEnabled = this._info.hasAccuracy || false
 	}
 
 	calcValues = () => {

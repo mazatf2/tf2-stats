@@ -20,6 +20,8 @@ class LogDB {
 		return new Promise((resolve) => {
 				if (this.DB.players[steamID] === undefined) {
 					this.DB.players[steamID] = new Player(steamID, logInfoObj)
+				} else {
+					this.DB.players[steamID].initNewLog(logInfoObj)
 				}
 				resolve(this.DB)
 			}

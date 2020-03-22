@@ -36,16 +36,15 @@ class ProcessLog {
 				)
 			}
 
-			Promise.all(promises).then(() => {
-				this.db.awardMedals(Object.keys(log.players))
-			})
-
 			for (let killStreak of log.killstreaks) {
-				this.db.addKillStreaksEntry(killStreak.steamid, killStreak)
-
+				promises.push(this.db.addKillStreaksEntry(killStreak.steamid, killStreak))
 			}
 
-			resolve({db: this.db.getDB(), player: this.db.getPlayer(steam3ID)})
+			Promise.all(promises).then(() => {
+				this.db.awardMedals(Object.keys(log.players)).then(() => {
+					resolve({db: this.db.getDB(), player: this.db.getPlayer(steam3ID)})
+				})
+			})
 
 		})
 	}
