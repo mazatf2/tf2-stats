@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {sum} from '../utils'
+import {GridCell} from '@rmwc/grid'
 
 class GlobalPanel extends Component {
 	render() {
@@ -10,7 +11,7 @@ class GlobalPanel extends Component {
 		const score = player.score
 
 		return (
-			<div>
+			<GridCell>
 				<table>
 					<thead>
 					<tr>
@@ -24,7 +25,7 @@ class GlobalPanel extends Component {
 					</tr>
 					</tbody>
 				</table>
-			</div>
+			</GridCell>
 		)
 	}
 }

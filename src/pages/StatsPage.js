@@ -15,6 +15,9 @@ import GlobalPanel from '../panels/GlobalPanel'
 import TopWeaponsPanel from '../panels/TopWeaponsPanel'
 import MedalsPanel from '../panels/MedalsPanel'
 
+import {Grid, GridCell} from '@rmwc/grid'
+import '@material/layout-grid/dist/mdc.layout-grid.css'
+
 class StatsPage extends Component {
 	state = {
 		db: null,
@@ -64,12 +67,12 @@ class StatsPage extends Component {
 			<div>
 				stats {steamID}
 				<HeaderPanel player={player}/>
-				<div className='grid'>
+				<Grid>
 					<GlobalPanel player={player}/>
 					<TeamworkPanel player={player}/>
 					<CombatPanel player={player}/>
-				</div>
-				<div className='grid'>
+				</Grid>
+				<Grid>
 					<ClassBadge showClass='scout' player={player} steamID={steamID}/>
 					<ClassBadge showClass='soldier' player={player} steamID={steamID}/>
 					<ClassBadge showClass='pyro' player={player} steamID={steamID}/>
@@ -81,13 +84,17 @@ class StatsPage extends Component {
 					<ClassBadge showClass='medic' player={player} steamID={steamID}/>
 					<ClassBadge showClass='sniper' player={player} steamID={steamID}/>
 					<ClassBadge showClass='spy' player={player} steamID={steamID}/>
-				</div>
-				<div className='grid'>
-					<TopWeaponsPanel player={player}/>
-				</div>
-				<div className='grid'>
-					<MedalsPanel player={player}/>
-				</div>
+				</Grid>
+				<Grid>
+					<GridCell>
+						<TopWeaponsPanel player={player}/>
+					</GridCell>
+				</Grid>
+				<Grid>
+					<GridCell>
+						<MedalsPanel player={player}/>
+					</GridCell>
+				</Grid>
 			</div>
 		)
 	}

@@ -4,6 +4,7 @@ import ClassImage from '../images/ClassImage'
 import MapImage from '../images/MapImage'
 import {dataDecimals, dataPercentage, sum} from '../utils'
 import WeaponImage from '../images/WeaponImage'
+import {Grid, GridCell} from '@rmwc/grid'
 
 class HeaderPanel extends Component {
 	render() {
@@ -26,9 +27,9 @@ class HeaderPanel extends Component {
 		const accuracy = (player.avgAccuracy || 0 ).toFixed(dataPercentage) * 100
 
 		return (
-			<div className='Header-Panel'>
-				<div>rank</div>
-				<div className='Header-Panel-Info'>
+			<Grid>
+				<GridCell>rank</GridCell>
+				<GridCell className='Header-Panel-Info'>
 					<p>
 						K/D<br/>{kdr}<br/>{kills} Kills
 					</p>
@@ -37,13 +38,13 @@ class HeaderPanel extends Component {
 					</p>
 					<p>Time</p>
 					<p>Accuracy<br/>{accuracy} %</p>
-				</div>
-				<div className='Header-Panel-Images'>
+				</GridCell>
+				<GridCell className='Header-Panel-Images'>
 					<ClassImage class={mostPlayedClass}/>
 					<WeaponImage name={mostUsedWeapon}/>
 					<MapImage map={mostPlayedMap}/>
-				</div>
-			</div>
+				</GridCell>
+			</Grid>
 		)
 	}
 }

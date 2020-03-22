@@ -2,6 +2,7 @@ import React from 'react'
 import './ClassBadge.css'
 import {dataDecimals, localizedClass, sum, toFixed} from '../utils'
 import SchemaAchievement from '../steam_api/SchemaAchievement'
+import {GridCell} from '@rmwc/grid'
 
 class ClassBadge extends React.Component {
 	constructor(props) {
@@ -75,7 +76,7 @@ class ClassBadge extends React.Component {
 		const badgeImg = <SchemaAchievement name={badgeName} version={time > 0.1}/>
 
 		return (
-			<div>
+			<GridCell>
 				<table className='ClassBadge' ref={this.tableRef}>
 					<thead>
 					<tr>
@@ -109,7 +110,7 @@ class ClassBadge extends React.Component {
 					</tr>
 					</tbody>
 				</table>
-			</div>
+			</GridCell>
 		)
 	}
 }

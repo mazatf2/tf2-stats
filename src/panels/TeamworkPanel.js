@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {sum} from '../utils'
+import {GridCell} from '@rmwc/grid'
 
 class TeamworkPanel extends Component {
 	render() {
@@ -14,7 +15,7 @@ class TeamworkPanel extends Component {
 		const ubers = sum(player.ubers)
 
 		return (
-			<div>
+			<GridCell>
 				<table>
 					<thead>
 					<tr>
@@ -47,7 +48,7 @@ class TeamworkPanel extends Component {
 					</tr>
 					</tbody>
 				</table>
-			</div>
+			</GridCell>
 		)
 	}
 }

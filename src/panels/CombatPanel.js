@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {dataDecimals, dataPercentage, max, sum} from '../utils'
 import '../css/Table.css'
+import {GridCell} from '@rmwc/grid'
 
 class CombatPanel extends Component {
 	render() {
@@ -26,7 +27,7 @@ class CombatPanel extends Component {
 		const deathsPerGame = (deaths / player.deaths.length).toFixed(dataDecimals)
 
 		return (
-			<div>
+			<GridCell>
 				<table>
 					<thead>
 					<tr>
@@ -83,7 +84,7 @@ class CombatPanel extends Component {
 					</tbody>
 
 				</table>
-			</div>
+			</GridCell>
 		)
 	}
 }
