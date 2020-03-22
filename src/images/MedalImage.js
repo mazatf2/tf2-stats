@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './MedalImage.css'
-import medalsDef from '../logs/Medals/Medals_def'
+import medalsDef from '../logDB/Medals/Medals_def'
 
 class MedalImage extends Component {
 	render() {

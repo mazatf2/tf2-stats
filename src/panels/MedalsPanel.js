@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import medalsDef from '../logs/Medals/Medals_def'
+import medalsDef from '../logDB/Medals/Medals_def'
 import MedalImage from '../images/MedalImage'
 
 class MedalsPanel extends Component {

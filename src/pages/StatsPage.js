@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import ProcessLog from '../logs/ProcessLog'
+import ProcessLog from '../logDB/ProcessLog'
 
 import test1 from '../test_data/test1.json'
 import test2 from '../test_data/test2.json'
