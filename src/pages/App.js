@@ -21,7 +21,7 @@ function App() {
                     <Link to="/profile/76561198075543642">test profile</Link>
 				</p>
 				<Route path="/test" component={TestsPage}/>
-				<Route path="/profile/:id(\d+)" component={StatsPage}/>
+				<Route path="/profile/:id(\d{17})" component={StatsPage}/>
 
 			</Router>
 		</div>

@@ -19,12 +19,20 @@ class StatsPage extends Component {
 	state = {
 		db: null,
 		player: null,
-		steam3ID: '[U:1:135100113]'//'[U:1:115277914]'
+		steam3ID: null,
+		error: null
 	}
 
 	componentDidMount() {
 		let id = this.props.match.params.id
-		let steam3ID = new SteamID(id).getSteam3RenderedID()
+		const steam64 = new SteamID(id)
+
+		if(!steam64.isValid()){
+			this.setState({error: 'Invalid Steam ID'})
+			return
+		}
+
+		let steam3ID = steam64.getSteam3RenderedID()
 		this.setState({steam3ID: steam3ID})
 
 		const testData = async ()=>{
@@ -45,6 +53,10 @@ class StatsPage extends Component {
 	}
 
 	render() {
+		if(this.state.error){
+			return (<div>{this.state.error}</div>)
+		}
+
 		const steamID = this.state.steam3ID
 		const player = this.state.player
 
