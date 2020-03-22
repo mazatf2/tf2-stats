@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import SteamID from 'steamid'
-import data1 from './data/test1'
-import data2 from './data/test2'
-import data3 from './data/2426192.json'
-import data4 from './data/2426167.json'
+import data1 from '../test_data/test1'
+import data2 from '../test_data/test2'
+import data3 from '../test_data/2426192.json'
+import data4 from '../test_data/2426167.json'
 import {Link} from 'react-router-dom'
 
 const data = [data1.names, data2.names, data3.names, data4.names]
