@@ -76,7 +76,7 @@ class ClassBadge extends React.Component {
 		const badgeImg = <SchemaAchievement name={badgeName} version={time > 0.1}/>
 
 		return (
-			<GridCell>
+			<GridCell className='center-hack'>
 				<table className='ClassBadge' ref={this.tableRef}>
 					<thead>
 					<tr>

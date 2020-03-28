@@ -1,9 +1,15 @@
 import React from 'react'
 import logo from '../logo.svg'
 import './App.css'
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom'
 import StatsPage from './StatsPage'
 import TestsPage from './TestsPage'
+import {TopAppBar, TopAppBarFixedAdjust, TopAppBarRow, TopAppBarSection, TopAppBarTitle} from '@rmwc/top-app-bar'
+
+import '@material/theme/dist/mdc.theme.css'
+import '@material/top-app-bar/dist/mdc.top-app-bar.css'
+import '@material/layout-grid/dist/mdc.layout-grid.css'
+import '@material/list/dist/mdc.list.css'
 
 function App() {
 	return (

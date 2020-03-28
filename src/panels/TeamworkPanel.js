@@ -15,7 +15,7 @@ class TeamworkPanel extends Component {
 		const ubers = sum(player.ubers)
 
 		return (
-			<GridCell>
+			<GridCell className='center-hack'>
 				<table>
 					<thead>
 					<tr>

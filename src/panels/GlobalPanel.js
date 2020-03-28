@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {sum} from '../utils'
 import {GridCell} from '@rmwc/grid'
 
 class GlobalPanel extends Component {
@@ -11,7 +10,7 @@ class GlobalPanel extends Component {
 		const score = player.score
 
 		return (
-			<GridCell>
+			<GridCell className='center-hack'>
 				<table>
 					<thead>
 					<tr>

@@ -16,7 +16,6 @@ import TopWeaponsPanel from '../panels/TopWeaponsPanel'
 import MedalsPanel from '../panels/MedalsPanel'
 
 import {Grid, GridCell} from '@rmwc/grid'
-import '@material/layout-grid/dist/mdc.layout-grid.css'
 
 class StatsPage extends Component {
 	state = {
@@ -64,8 +63,13 @@ class StatsPage extends Component {
 		const player = this.state.player
 
 		return (
-			<div>
-				stats {steamID}
+			<>
+				<Grid>
+					<GridCell></GridCell>
+					<GridCell align='middle'>
+						stats {steamID}
+					</GridCell>
+				</Grid>
 				<HeaderPanel player={player}/>
 				<Grid>
 					<GlobalPanel player={player}/>
@@ -86,16 +90,10 @@ class StatsPage extends Component {
 					<ClassBadge showClass='spy' player={player} steamID={steamID}/>
 				</Grid>
 				<Grid>
-					<GridCell>
-						<TopWeaponsPanel player={player}/>
-					</GridCell>
+					<TopWeaponsPanel player={player}/>
 				</Grid>
-				<Grid>
-					<GridCell>
-						<MedalsPanel player={player}/>
-					</GridCell>
-				</Grid>
-			</div>
+				<MedalsPanel player={player}/>
+			</>
 		)
 	}
 }

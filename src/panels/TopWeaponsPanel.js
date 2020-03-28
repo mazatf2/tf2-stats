@@ -12,7 +12,7 @@ class TopWeaponsPanel extends Component {
 		const topWeapons = Object.entries(player.topWeapons)
 
 		return (
-			<GridCell>
+			<GridCell className='center-hack'>
 				<table>
 					<tbody>
 					{topWeapons.map(([name, weapon]) => {

@@ -27,7 +27,7 @@ class CombatPanel extends Component {
 		const deathsPerGame = (deaths / player.deaths.length).toFixed(dataDecimals)
 
 		return (
-			<GridCell>
+			<GridCell className='center-hack'>
 				<table>
 					<thead>
 					<tr>

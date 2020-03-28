@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import medalsDef from '../logDB/Medals/Medals_def'
 import MedalImage from '../images/MedalImage'
-import {GridCell} from '@rmwc/grid'
+import {Grid, GridCell} from '@rmwc/grid'
 
 class MedalsPanel extends Component {
 	render() {
@@ -11,7 +11,7 @@ class MedalsPanel extends Component {
 		}
 
 		return (
-			<GridCell>
+			<Grid>
 				{Object.entries(medalsDef).map(([key, value]) => {
 					const amountGet = player.medals[key] || 0
 					const isDisabled = amountGet < 1
@@ -22,13 +22,13 @@ class MedalsPanel extends Component {
 					}
 
 					return (
-						<div key={key}>
-							<MedalImage name={key} isDisabled={isDisabled}/>
+						<GridCell key={key}>
+							<MedalImage name={key} isDisabled={isDisabled}/><br/>
 							{txt}
-						</div>
+						</GridCell>
 					)
 				})}
-			</GridCell>
+			</Grid>
 		)
 	}
 }
