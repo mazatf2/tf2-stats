@@ -5,6 +5,8 @@ import data2 from '../test_data/test2'
 import data3 from '../test_data/2426192.json'
 import data4 from '../test_data/2426167.json'
 import {Link} from 'react-router-dom'
+import {List, ListItem} from '@rmwc/list'
+import {Grid, GridCell} from '@rmwc/grid'
 
 const data = [data1.names, data2.names, data3.names, data4.names]
 
@@ -23,20 +25,24 @@ class TestsPage extends Component {
 	render() {
 		const players = this.state.players
 		return (
-			<div>
-				dataset length: {data.length || 0} logs
-				<ul>
-					{Object.entries(players).map(([id, player]) => {
-							const steamID64 = new SteamID(id).getSteamID64()
-							return (
-								<li key={steamID64}>
-									<Link to={`profile/${steamID64}`}>{player} {id}</Link>
-								</li>
-							)
-						}
-					)}
-				</ul>
-			</div>
+			<Grid align='left'>
+				<GridCell>
+				</GridCell>
+				<GridCell align='middle'>
+					dataset length: {data.length || 0} logs
+					<List>
+						{Object.entries(players).map(([id, player]) => {
+								const steamID64 = new SteamID(id).getSteamID64()
+								return (
+									<ListItem key={steamID64} className='center-hack'>
+										<Link to={`profile/${steamID64}`}>{player} {id}</Link>
+									</ListItem>
+								)
+							}
+						)}
+					</List>
+				</GridCell>
+			</Grid>
 		)
 	}
 }
