@@ -14,22 +14,25 @@ import '@material/list/dist/mdc.list.css'
 function App() {
 	return (
 		<div className='App'>
-			<header className='App-header'>
-				<img src={logo} className='App-logo' alt='logo'/>
-			</header>
 			<Router>
-				<div  className={'App-body'}>
-				<p>
-					<Link to='/'>front page</Link></p>
-				<p>
-					<Link to='/test'>tests</Link>
-				</p>
-				<p>
-					<Link to='/profile/76561198075543642'>test profile</Link>
-				</p>
-				<Route path='/test' component={TestsPage}/>
-				<Route path='/profile/:id(\d{17})' component={StatsPage}/>
-				</div>
+				<TopAppBar>
+					<TopAppBarRow>
+						<TopAppBarSection>
+							<img src={logo} className='App-logo' alt='logo'/>
+							<TopAppBarTitle>TF2 Player Stats</TopAppBarTitle>
+						</TopAppBarSection>
+						<TopAppBarSection alignEnd>
+							<Link to='/'>front page</Link>
+							<Link to='/test'>tests</Link>
+							<Link to='/profile/76561198075543642'>test profile</Link>
+						</TopAppBarSection>
+					</TopAppBarRow>
+				</TopAppBar>
+				<TopAppBarFixedAdjust/>
+				<Switch>
+					<Route path='/test' component={TestsPage}/>
+					<Route path='/profile/:id(\d{17})' component={StatsPage}/>
+				</Switch>
 			</Router>
 		</div>
 	)
