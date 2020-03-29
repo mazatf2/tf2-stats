@@ -34,8 +34,8 @@ class TestsPage extends Component {
 						{Object.entries(players).map(([id, player]) => {
 								const steamID64 = new SteamID(id).getSteamID64()
 								return (
-									<ListItem key={steamID64} className='center-hack'>
-										<Link to={`profile/${steamID64}`}>{player} {id}</Link>
+									<ListItem tag={Link} to={`profile/${steamID64}`} key={steamID64} className='center-hack'>
+										{player} {id}
 									</ListItem>
 								)
 							}
