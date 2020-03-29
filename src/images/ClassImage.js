@@ -1,17 +1,19 @@
 import React, {Component} from 'react'
-import soldier from './classes/soldier.png'
+import classList from './classes/classlist.json'
 
 class ClassImage extends Component {
 	render() {
-		let img
 		const gameClass = this.props.class
-		if(gameClass === 'soldier'){
-			img = soldier
-		} else {
-			img = soldier
+		if (!gameClass) {
+			return
 		}
+		if (!classList[gameClass]) {
+			return
+		}
+
+		const url = process.env.PUBLIC_URL + '/classes/' + classList[gameClass]
 		return (
-			<img src={img} alt=''/>
+			<img src={url} className='class-image' alt=''/>
 		)
 	}
 }
