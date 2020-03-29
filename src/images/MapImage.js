@@ -1,13 +1,19 @@
 import React, {Component} from 'react'
-import processMap from './maps/cp_process_final.png'
+import mapList from './maps/maplist.json'
 
 class MapImage extends Component {
 	render() {
-		let img = processMap
-		//const gameMap = this.props.map
+		const map = this.props.map
+		if (!map) {
+			return
+		}
+		if (!mapList[map]) {
+			return
+		}
+		const url = process.env.PUBLIC_URL + '/maps/' + mapList[map]
 
 		return (
-			<img src={img} alt=''/>
+			<img src={url} className='map-image' alt=''/>
 		)
 	}
 }
