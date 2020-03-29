@@ -5,11 +5,12 @@ import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom'
 import StatsPage from './StatsPage'
 import TestsPage from './TestsPage'
 import {TopAppBar, TopAppBarFixedAdjust, TopAppBarRow, TopAppBarSection, TopAppBarTitle} from '@rmwc/top-app-bar'
+import {Theme} from '@rmwc/theme'
 
-import '@material/theme/dist/mdc.theme.css'
-import '@material/top-app-bar/dist/mdc.top-app-bar.css'
-import '@material/layout-grid/dist/mdc.layout-grid.css'
-import '@material/list/dist/mdc.list.css'
+import '@rmwc/top-app-bar/styles'
+import '@rmwc/theme/styles'
+import '@rmwc/grid/styles'
+import '@rmwc/list/styles'
 
 function App() {
 	return (
