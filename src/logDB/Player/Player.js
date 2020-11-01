@@ -104,18 +104,18 @@ export class Player {
 		return this
 	}
 
-	initNewLog = (logInfoObj) => {
+	initNewLog(logInfoObj) {
 		this._info = logInfoObj
 		this._isAccuracyEnabled = this._info.hasAccuracy || false
 	}
 
-	calcValues = () => {
+	calcValues() {
 		this._playTime()
 		this._weaponUsage()
 		this._score()
 	}
 
-	_playTime = () => {
+	_playTime() {
 		let maxPlayTime = 0
 		let mostPlayed = ''
 		for (let gameClassString of Object.keys(this.class_stats)) {
@@ -144,7 +144,7 @@ export class Player {
 		this.mostPlayedMap = mostTimesPlayedMap
 	}
 
-	_weaponUsage = () => {
+	_weaponUsage() {
 		let mostKills = 0
 		let mostKillsWeaponName = ''
 		for (let gameClass of Object.values(this.class_stats)) {
@@ -200,7 +200,7 @@ export class Player {
 		this.mostUsedWeapon = mostKillsWeaponName
 	}
 
-	_addTopWeapon = (weapon) => {
+	_addTopWeapon(weapon) {
 		this.topWeapons[weapon.name] = weapon
 	}
 
