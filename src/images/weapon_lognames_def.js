@@ -1,4 +1,4 @@
-{
+export default {
 	"bat": {
 		"log_name": "bat",
 		"logname_source": "tf_weapon_regexp",

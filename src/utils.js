@@ -1,4 +1,4 @@
-import weaponLogNames from './images/weapon_lognames_def.json'
+import weaponLogNames from './images/weapon_lognames_def'
 
 export const dataDecimals = 1 //1.0
 export const dataPercentage = 3

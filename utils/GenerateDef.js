@@ -142,9 +142,9 @@ const main = (name) => {
 	addMissingWeapon('tf_projectile_arrow', 56)
 	//TODO check if 1092 Fortified Compound is needed?
 
-	fs.writeFile(output + 'weapon_lognames_def.json', JSON.stringify(weaponLogNames, null, '\t'), (err) => {
+	fs.writeFile(output + 'weapon_lognames_def.js', JSON.stringify(weaponLogNames, null, '\t'), (err) => {
 		if (err) throw err
-		console.log('weapon_lognames_def.json done')
+		console.log('weapon_lognames_def.js done')
 	})
 
 	fs.writeFile('weapons_missing_automatic_lognames.json', JSON.stringify(missingWeaponLogNames, null, '\t'), (err) => {

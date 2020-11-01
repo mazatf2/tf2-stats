@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import SchemaItem from '../steam_api/SchemaItem'
-import WeaponLognames from './weapon_lognames_def.json'
+import WeaponLognames from './weapon_lognames_def'
 
 class WeaponImage extends Component {
 	render() {
