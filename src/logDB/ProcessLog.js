@@ -26,7 +26,7 @@ class ProcessLog {
 			let promises = []
 			for (let [steamID, player] of Object.entries(log.players)) {
 				promises.push(
-					this.db.addPlayer(steamID, log.info)
+					this.db.addPlayer(steamID, log.info, log)
 						.then(() => {
 							this.db.appendPlayerEntry(steamID, player, winner)
 						})

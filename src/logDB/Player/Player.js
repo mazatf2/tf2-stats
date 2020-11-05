@@ -3,14 +3,14 @@ import {ClassStatsHelper} from './ClassStatsHelper'
 import {KillStreaksHelper} from './KillStreaksHelper'
 
 export class Player {
-	constructor(steamID, logInfoObj) {
+	constructor(steamID, logInfoObj, log) {
 		this.steamID = steamID
 
 		this._info = null // initNewLog()
 		this._isAccuracyEnabled = false // initNewLog()
-		this.initNewLog(logInfoObj)
+		this.initNewLog(steamID, logInfoObj, log)
 
-		this.team = {Red: [], Blue: []}
+		this.team = []
 		this.kills = []
 		this.deaths = []
 		this.assists = []
@@ -55,6 +55,7 @@ export class Player {
 		this.killstreaks = new KillStreaksHelper() //doesn't contain all killstreaks
 		this.maps = []
 		this.mapsPlayed = {} // {cp_process_final: 2}
+		this.teams = {Red: [], Blue: []} //['Red', 'Red']
 
 		this.mostPlayedClass = ''
 		this.mostPlayedClassPlayTime = 0
@@ -99,14 +100,18 @@ export class Player {
 			cpc: null,
 			ic: null,
 		}
+		this.currentName = '' // initNewLog()
+		this.currentTeam = ''
+
 		this.medals = {gold: 0, silver: 0, bronze: 0}
 
 		return this
 	}
 
-	initNewLog(logInfoObj) {
+	initNewLog(steamID, logInfoObj, log) {
 		this._info = logInfoObj
 		this._isAccuracyEnabled = this._info.hasAccuracy || false
+		this.currentName = log.names[steamID]
 	}
 
 	calcValues() {

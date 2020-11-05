@@ -16,12 +16,12 @@ class LogDB {
 		window.db = this.DB //debug
 	}
 
-	addPlayer(steamID, logInfoObj) {
+	addPlayer(steamID, logInfoObj, log) {
 		return new Promise((resolve) => {
 				if (this.DB.players[steamID] === undefined) {
-					this.DB.players[steamID] = new Player(steamID, logInfoObj)
+					this.DB.players[steamID] = new Player(steamID, logInfoObj, log)
 				} else {
-					this.DB.players[steamID].initNewLog(logInfoObj)
+					this.DB.players[steamID].initNewLog(steamID, logInfoObj, log)
 				}
 				resolve(this.DB)
 			}
@@ -67,11 +67,13 @@ class LogDB {
 				} else if (key === 'kpd' || key === 'kapd') {
 					this.DB.players[steamID][key].push(Number(value))
 				} else if (key === 'team') {
+					this.DB.players[steamID].currentTeam = value
+					this.DB.players[steamID].team.push(value)
 					if (value === 'Red') {
-						this.DB.players[steamID].team.Red.push(value)
+						this.DB.players[steamID].teams.Red.push(value)
 					}
 					if (value === 'Blue') {
-						this.DB.players[steamID].team.Blue.push(value)
+						this.DB.players[steamID].teams.Blue.push(value)
 					}
 					if (winner === value) {
 						this.DB.players[steamID].wins += 1
