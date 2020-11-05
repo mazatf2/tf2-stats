@@ -76,6 +76,7 @@ const addWeapon = (name, schemaData, nameSource) => {
 		item_slot: schemaData.item_slot,
 		item_class: schemaData.item_class,
 		item_type_name: schemaData.item_type_name,
+		used_by_classes: schemaData.used_by_classes || []
 	}
 
 	Object.entries(result).forEach(([key, value]) => {
@@ -142,7 +143,7 @@ const main = (name) => {
 	addMissingWeapon('tf_projectile_arrow', 56)
 	//TODO check if 1092 Fortified Compound is needed?
 
-	fs.writeFile(output + 'weapon_lognames_def.js', JSON.stringify(weaponLogNames, null, '\t'), (err) => {
+	fs.writeFile(output + 'weapon_lognames_def.js', 'export default '+ JSON.stringify(weaponLogNames, null, '\t'), (err) => {
 		if (err) throw err
 		console.log('weapon_lognames_def.js done')
 	})
