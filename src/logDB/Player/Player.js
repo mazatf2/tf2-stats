@@ -8,6 +8,7 @@ export class Player {
 
 		this._info = null // initNewLog()
 		this._isAccuracyEnabled = false // initNewLog()
+		this.currentName = '' // initNewLog()
 		this.initNewLog(steamID, logInfoObj, log)
 
 		this.team = []
@@ -100,7 +101,6 @@ export class Player {
 			cpc: null,
 			ic: null,
 		}
-		this.currentName = '' // initNewLog()
 		this.currentTeam = ''
 
 		this.medals = {gold: 0, silver: 0, bronze: 0}
