@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './HeaderPanel.css'
+// import './HeaderPanel.css'
 import ClassImage from '../images/ClassImage'
 import MapImage from '../images/MapImage'
 import {dataDecimals, dataPercentage, sum} from '../utils'

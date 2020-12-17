@@ -1,5 +1,5 @@
 import React from 'react'
-import './ClassBadge.css'
+// import './ClassBadge.css'
 import {dataDecimals, localizedClass, sum, toFixed} from '../utils'
 import SchemaAchievement from '../steam_api/SchemaAchievement'
 import {GridCell} from '@rmwc/grid'

@@ -13,7 +13,6 @@ class LogDB {
 				})
 			}
 		}
-		window.db = this.DB //debug
 	}
 
 	addPlayer(steamID, logInfoObj, log) {

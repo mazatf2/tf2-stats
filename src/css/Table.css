@@ -1,10 +1,12 @@
-th {
+.table-header {
+    font-weight: bold;
+}
+
+.table-header th {
     text-align: left;
     font-weight: normal;
 }
-td {
+
+.table-header td {
     text-align: right;
-}
-.table-header{
-    font-weight: bold;
 }

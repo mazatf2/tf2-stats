@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {dataDecimals, dataPercentage, max, sum} from '../utils'
-import '../css/Table.css'
+// import '../css/Table.css'
 import {GridCell} from '@rmwc/grid'
 
 class CombatPanel extends Component {

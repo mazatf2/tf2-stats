@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './MedalImage.css'
+// import './MedalImage.css'
 import medalsDef from '../logDB/Medals/Medals_def'
 
 class MedalImage extends Component {
